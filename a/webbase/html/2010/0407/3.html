@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>网页中应用表格爱好者_我的网站</title>
+<meta name="keywords" content="网页中应用表格爱好者" />
+<meta name="description" content="你认为已经知道怎么制做表格了吧。当然，你已经了解 table、tr、td和th标签了，甚至还在你的口袋里装入了rowspan和colspan。你确实可以制做一个精美小巧的咖啡色三合板桌子（表格），但难道你不想做一个优雅稳固，上面有玻璃的，足以承受一头大笨象的宴会桌（" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/html/'>HTML</a> > 网页中应用表格爱好者</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">网页中应用表格爱好者 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=3&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>你认为已经知道怎么制做表格了吧。当然，你已经了解 table、tr、td和th标签了，甚至还在你的口袋里装入了rowspan和colspan。你确实可以制做一个精美小巧的咖啡色三合板桌子（表格），但难道你不想做一个优雅稳固，上面有玻璃的，足以承受一头大笨象的宴会桌（表格）？</p><p><strong>列反罢工</strong></p><p>表格行简直使表格列看起来很愚蠢。同样的工作，表格由行与行构建，让列感到十分沮丧。</p><p>但是很幸运，colgroup和col标签来拯救热心的列了。</p><p>这两个标签允许你定义表格列和尽你所需地样式化它们，对于你需要把列排成行或不同着色特别有用，如果没有它们，你需要样式化每一个单独的单元格。</p><p>这是一个使用这些标签的例子：</p><p class="code"><table><br /><colgroup> <col /> <col class="alternate" /> <col /> </colgroup><br /><tr><br /><td>This</td><br /><td>That</td><br /><td>The other</td><br /></tr><br /><tr><br /><td>Ladybird</td><br /><td>Locust</td><br /><td>Lunch</td><br /></tr><br /></table> </p><p>alternate类的样式将被应用到第二列，或者说每一行的第二个单元格。</p><p>你当然可以在colgroup或者col上使用span属性，跟rowspan和colspan有相似的用途</p><p>colgroup一起使用可以定义属于列组的行数，比如<colgroup span="2"></colgroup>会组合头两列。当在colgroup使用span时，不应该再使用col标签。</p><p>在col里使用span是更明智的，可以，比如，应用在上述例子像这样：</p><p class="code"><table><br /><colgroup> <col /> <col span="2" class="alternate" /> </colgroup><br />&nbsp;... </p><p>这将把alternate类应用到最后两列。</p><p><strong>注意</strong></p><p>哦，但是可能有一个陷井，不是吗？那就是：你仅能样式化列的是边框、背景、宽度和可见性。</p><p>Internet Explorer在这方面看起来比其他浏览器表现更好因为它装载有漂亮的CSS属性比如 color，但是，正如结果一样，这是因为它疯狂古怪的行为而已。这种奇特的异常可以让Ian Hixie来解释。</p><p><strong>摘要和说明插曲</strong></p><p>一个简要和容易的提高易用性的思考是，总是为表格应用摘要和说明。</p><p>摘要可以在表格起始标签table中用summary属性应用到表格中。这不会显示，但可以辅助非可视化的表格表现。</p><p>caption标签在起始标签table后直接定义说明。它默认直接在表格顶端出现，但可以在CSS属性caption-side中设置top、right、bottom或者left值，尽管IE不会在意。</p><p class="code"><table summary="The mating habits of locust, showing how many use protection and how many have a cigarette afterwards"><br /><caption>Locust mating habits</caption><br />... </p><p><strong>表头、表注和滚动表格的探讨</strong></p><p>thead、tfoot和tbody允许你把表格分为表头、表注和表格主体。对于大表格尤其有用，在打印的时候，表头和表注应该会在每一页都出现。</p><p>这些元素必须按thead-tfoot-tbody的顺序定义，像这样：</p><p class="code"><table><br /><thead><br /><tr><br /><td>Header 1</td><br /><td>Header 2</td><br /><td>Header 3</td><br /></tr><br /></thead><br /><tfoot><br /><tr><br /><td>Footer 1</td><br /><td>Footer 2</td><br /><td>Footer 3</td><br /></tr><br /></tfoot><br /><tbody><br /><tr><br /><td>Cell 1</td><br /><td>Cell 2</td><br /><td>Cell 3</td><br /></tr><br />&nbsp;... <br /></tbody><br /></table> </p><p>你可以让表格主体tbody在基于Gecko的浏览器（Mozilla、Firefox和Netscape 6+等）滚动，通过应用overflow: auto; max-height: [whatever] 的样式。然后你可以看见表头和表注固定，而表的主体右边有滚动条。你应该谨慎使用max-height属性因为IE不认识，比较安全的做法是使用 height属性，IE将为它应用到每一行。</p><p>注意：说回浏览器的差异，目前IE遇到表头和表注时还是没有什么线索，尽管还是当作表格来处理，但打印的时候不会在哦每一页都出现表头和表注，只孤零零地传递滚动的表格。</p><p><strong>注意</strong></p><p>谨慎对待滚动表格。尽管它们提供十分有用的目的，大部分用户不习惯它们并且认为线性数据是唯一的。</p>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/html/2010/0407/7.html" rel="similar" title="对于初学者不错的XHTML教程"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>对于初学者不错的XHTML教程</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/10.html" rel="similar" title="表格中单元格之间分隔线的隐藏方"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>表格中单元格之间分隔线的隐藏方</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/18.html" rel="similar" title="浅谈XHTML（可扩展HTML）标准中CDAT"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>浅谈XHTML（可扩展HTML）标准中CDAT</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>快速精通网页框架FRAME_我的网站</title>
+<meta name="keywords" content="快速精通网页框架FRAME" />
+<meta name="description" content="FRAME（框架）是Web上经常会看到的页面结构。使用可视Web开发工具（比如Dreamweaver或者Frontpage），虽然可以在 WYSIWYG环境中通过简单的鼠标托拽完成FRAME的构建，但是要实现真正细致甚至强大的功能，仔细理解FRAME的代码结构至关重要！你将发现， FRAME原" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/html/'>HTML</a> > 快速精通网页框架FRAME</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">快速精通网页框架FRAME <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=17&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>FRAME（框架）是Web上经常会看到的页面结构。使用可视Web开发工具（比如Dreamweaver或者Frontpage），虽然可以在 WYSIWYG环境中通过简单的鼠标托拽完成FRAME的构建，但是要实现真正细致甚至强大的功能，仔细理解FRAME的代码结构至关重要！你将发现， FRAME原来是这样的亲切易用。 </p><p>　　<strong>创建基本的FRAMESET</strong> </p><p>　　FRAMESET页面与普遍的Web页面有些不同。虽然仍旧以<HTML>和包含标题的<HEAD>标记以及其他脚本开始，但是其内容仅仅是表示的各个页面的版式设计。因此，不再需要有<BODY>元素，只需要<FRAMESET>标记。 </p><p>　　通过<FRAMESET>标记的<rows>和<cols>属性，浏览器窗口被分割为一个个格子。 <rows>和<cols>的设置值可以是固定的像素值，可以是总空间的百分比值，还可以是用*以及一个数字相乘表示的分割剩余空间的比例值。比如说： </p><p>cols="80,20%,*" 分为3列，宽度分别为80像素，窗口宽度的20％，以及剩余宽度 <br />rows="25%,75%" 分为2列，宽度分别为窗口宽度的25％和75％ <br />rows="*,3*" 与上述第2个表示的一样，分为2列，但表示方法不同：第一列宽度为第二列的1/3 </p><p>　　在<FRAMESET>和</FRAMESET>之间，用多个<FRAME>标记表示每个分割区。col 表示从左到右的列，row表示从上到下的行。每个<FRAME>有一个src属性，给出了这个FRAME的内容。它可以是浏览器能显示的任何一个合法URL，或者是另外一个FRAMESET。为预防递归现象，一个FRAME不能包含它本身所在的FRAMESET页面。要用name属性定义 FRAME的名字，这样就可以在代码或者脚本程序中引用它。 请看一段基本的FRAMESET代码： </p><p class="code"><HTML> <br /><HEAD> <br /><TITLE>Simple FRAMESET</TITLE> <br /></HEAD> <br /><FRAMESET cols="40%,60%" rows="2*,*"> <br /><FRAME name="TopLeft" src="red.htm"> <br /><FRAME name="TopRight" src="green.htm"> <br /><FRAME name="BotLeft" src="blue.htm"> <br /><FRAME name="BotRight" src="white.htm"> <br /></FRAMESET> <br /></HTML> <br /><FRAMESET rows="105,*"> <br /><FRAME name="adbanner" src="ad.html"> <br /><FRAMESET cols="40%,60%"> <br /><FRAME name="left" src="red.htm"> <br /><FRAMESET rows="*,*"> <br /><FRAME name="top" src="blue.htm"> <br /><FRAME name="bottom" src="white.htm"> <br /></FRAMESET> <br /></FRAMESET> <br /></FRAMESET> </p><p>　　<strong>FRAME间的链接</strong> </p><p>　　一个FRAMESET结构的页面，新文档只转载进窗口的一部分中，而其他页面则保持静态不变。当用户点击FRAME中的链接时，新内容就在同一 FRAME内打开。要让新内容在其他FRAME中打开，可以设置<A>标记的target属性值为那个FRAME的name值。 </p><p>　　而且，我们还可以设置打开目标为当前可见的任意一个FRAME，而不局限于本身的FRAMESET。目标可能是一个嵌套的FRAMESET中的 FRAME，也可能是其他窗口中的FRAME。但是如果目标FRAME不存在，就会产生一个带有目标FRAME名字的新窗口。 </p><p>　　下面举个例子说明一下，假设有一个简单含2－FRAME的FRAMESET，文件名叫做home.html，代码如下： </p><p class="code"><HTML> <br /><HEAD><TITLE>FrommCo home page</TITLE></HEAD> <br /><FRAMESET cols="115,*"> <br /><FRAME src="menu.htm"> <br /><FRAME name="content" src="main.htm"> <br /></FRAMESET> <br /></HTML> </p><p>　　文件menu.htm在左边的FRAME中，其中有一系列链接，点击它们后新内容将在右边的叫做content的FRAME中打开。下面是menu.html的代码： </p><p class="code"><HTML><HEAD></HEAD> <br /><BODY><P><BR> <br /><IMG src="Images/tmp_logo.gif" alt="FrommCo"><P> <br /><A href="main.htm" target="content">Main page</A><P> <br /><A href="mission.htm" target="content">Our mission</A><P> <br /><A href="staff.htm" target="content">Our staff</A><P> <br /><A href="splash.htm" target="_parent">FrommCo splash page</A> <br /></BODY></HTML> </p><p>　　请注意最后一个链接中target的定义为_parent，这属于4个特殊的保留值。它们是： </p><p>_parent：在当前FRAMESET位置显示新href。 <br />_top：在当前整个窗口位置显示新href，比如本身FRAMESET位于另一个FRAMESET中。 <br />_self：强制在当前FRAME中显示新href。 <br />_blank：在新窗口中显示href。 </p><p>　　表示客户端图形地图的<AREA>标记同样可以应用target属性，比如： </p><p class="code">　　<AREA shape=circle coords="75,75,50" href="main.htm" target="content" alt="Main page"> </p><p>　　还有一种经常的情况是：Web页面中的大部分或者全部链接都要求在一个特别的FRAME中打开。这时，可以在页面的<HEAD>代码区使用<BASE>标记设置默认的target，然后再分别定义特殊链接的target值。 </p><p>　　<strong>修饰FRAME</strong> </p><p>　　FRAMESET不仅在宽度、高度等方面具有可控制的数值，在美观方面也同样可以精确设置。 </p><p>　　默认情况下，FRAMESET的FRAME间有一个凸起的边沿，表示分割效果。如果不喜欢这个，想营造“无缝连接”的效果，可以在< FRAME>标记中设置FRAMEborder=0来消除它。在3.0及高版本的Navigator和Internet Explorer中，如果在<FRAMESET>标记中设置FRAMEborder=0，那么除了设置为FRAMEborder=1的 FRAME外，所有其他FRAME的边沿都将消失。 </p><p>　　虽然设置了FRAMEborder=0，有些浏览器仍旧会在FRAME间保留一些边沿的颜色痕迹。这时，可以在< FRAMESET>标记中添加FRAMEspacing=0（对Internet Explorer）或者border=0（对Navigator和Opera）实现真正的无缝连接。 </p><p>　　请看下面的代码是如何使用这些属性的： </p><p class="code"><HTML> <br /><HEAD><TITLE>FrommCo home page</TITLE></HEAD> <br /><FRAMESET cols="115,*" FRAMEspacing=0 border=0> <br /><FRAME src="menu.htm" FRAMEborder=0 noresize scrolling=no> <br /><FRAME name="content" src="main.htm" FRAMEborder=0> <br /></FRAMESET> <br /></HTML> </p><p>　　上面的代码中有2个新的属性：noresize表示锁住FRAME而不允许使用鼠标改变大小，scrolling=no表示屏蔽FRAME的滚动条，scrolling=yes表示允许，scrolling=auto表示根据显示内容需要自动显示滚动条。 </p><p>　　<strong>浮动FRAME </strong></p><p>　　浮动FRAME是HTML4.0规范中的一个定义，目前的浏览器都支持它。 </p><p>　　不象FRAMESET表示的分割区样子，一个浮动FRAME作为一个内置对象存在于Web页面上，其样式就象一个页面上的一个图形或者一个 applet。浮动FRAME使用<IFRAME>标记，它具有与<FRAME>相同的大多数属性设置，包括：name、 src、marginwidth、marginheight、FRAMEborder以及scrolling。同时，它还具有与图形或者applet一样的height、width和align属性。 </p><p>　　而且，浮动FRAME遵循与普通FRAME一样的target原则：我们可以通过它的name来指向它。本原则适用于在任一类型FRAME中的浮动FRAME，反之易然。浮动FRAME中的没有traget的链接指向它本身，而_parent链接则指向包含<IFRAME>的文档所在的FRAME或者窗口。比如： </p><p class="code"><IFRAME name="floater" src="start.htm" width=150 height=200 hspace=10 align=left> <br /><IMG src="Images/noFRAME.gif" alt="You can't see the floating FRAME" <br />width=150 height=200 hspace=10 align=right> <br /></IFRAME><BR> <br /><A href="one.htm" target="floater">Show one.htm</A><P> <br /><A href="two.htm" target="floater">Show two.htm</A><P> <br /><A href="start.htm" target="floater">Bring back start.htm</A> </p><p>　　注意，对应支持<IFRAME>标记的浏览器，任何位于<IFRAME>和</IFRAME>间的内容都将忽略。反之，其中的内容将显示出来，这可以用作解释当前浏览器不支持<IFRAME>。 </p><p>　　<strong>何时使用FRAME</strong> </p><p>　　我们知道，FRAMESET的基本用途就是分割浏览器窗口，使得窗口的一部分内容改变，而其他部分保持不变。利用这个特性，就可以实现工具栏导航功能，一个FRAME内放置静态菜单页面，用户点击其中的项目后，在另外的FRAME内显示相关的内容。这样就可以从整体上减少文件大小，因为不必在每个内容页面中再包含菜单项目。 </p><p>　　FRAME有2个明显的不足： </p><p>　　FRAME从另外的级别上增加了站点的管理，原因在于超级链接不仅仅要指向适当的页面，而且也会装载到相关的FRAME内。 </p><p>　　另外，大多数浏览器在执行“添加书签”的操作时，只能记录下FRAMESET的初始位置。不管添加书签时是位于多么深的FRAMESET中，当再次选择这个书签时，就会返回到FRAMESET的初始页面。这就加大了访问者浏览指定内容的难度。 </p><p>　　但是，如果好好地组织站点信息，使导航操作只有不深的几层，那么，使用FRAME就能很好地为访问者服务。记住：访问者都希望简洁的导航信息。 </p><p>　　当然，导航并非是使用FRAME的唯一原因，也可以使用FRAME创建交换工具和交换页面。而且，FRAME的多文档框架结构非常适于被JavaScript应用程序所操作。 </p><p>　　<strong>用FRAME设计站点 </strong></p><p>　　最常用的FRAME结构就是“菜单－内容”FRAMESET。一个FRAME内放置导航菜单，另一个FRAME内转载子菜单，每个子菜单的链接就指向本身。唯一的有target的链接都在菜单FRAME内。 请看下面的例程代码： </p><p class="code"><HTML><HEAD> <br /><TITLE>Welcome to my site!</TITLE> <br /></HEAD> <br /><FRAMESET cols="150,*"> <br /><FRAME name="menu" src="menu.htm"> <br /><FRAME name="content" src="intro.htm"> <br /></FRAMESET> <br /><BODY> <br /><!--如果是支持FRAME的浏览器，则不会显示下面的内容；否则，也显示出简单菜单页面--> <br />Welcome to my site.<P> <br /><A href="intro.htm">Introduction</A> <br /><A href="products.htm">Products</A> <br /><A href="reviews.htm">Reviews</A> <br /></BODY></HTML>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/html/2010/0407/7.html" rel="similar" title="对于初学者不错的XHTML教程"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>对于初学者不错的XHTML教程</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/10.html" rel="similar" title="表格中单元格之间分隔线的隐藏方"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>表格中单元格之间分隔线的隐藏方</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/18.html" rel="similar" title="浅谈XHTML（可扩展HTML）标准中CDAT"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>浅谈XHTML（可扩展HTML）标准中CDAT</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

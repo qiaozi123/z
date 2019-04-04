@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style2/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style2/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style2/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+{dede:include filename="head.htm"/} 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+{dede:include filename="hd1.htm"/} 
+
+<!-- menu end -->
+
+<div class="all">
+  <div class="center">
+    <div class="content">
+      <div class="con_left">
+        <ul>
+          {dede:channelartlist}
+          <li class="li_top">
+            <div class="c_left"> <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a> </div>
+            <s class="circle"></s> <s class="sjx"></s>
+            <div class="juxk">
+              <div class="li_center">
+                <ul>
+                  {dede:arclist titlelen='60' row='1' flag='h'}
+                  <li> <a href="[field:arcurl /]">
+                    <div class="li_center1 hei_275"> <img src="[field:litpic/]" data-original="[field:litpic/]" alt="[field:title /]" width="590" height="275" />
+                      <div class="li_po_txt">[field:title /]</div>
+                    </div>
+                    </a> </li>
+                  {/dede:arclist}                     
+                  
+                  {dede:arclist titlelen='60' row='3'}
+                  <li>
+                    <div class="li_center1 hei_87"> <a href="[field:arcurl /]">
+                      <div class="li_txt"> <font>[field:title /]</font>
+                        <p> [field:description function='cn_substr(@me,180)'/]... </p>
+                      </div>
+                      <div class="li_pic"><img src="[field:litpic/]" data-original="[field:litpic/]" alt="[field:title /]" width="125" height="87" /></div>
+                      </a> </div>
+                  </li>
+                  {/dede:arclist}
+                </ul>
+              </div>
+            </div>
+          </li>
+          {/dede:channelartlist}
+        </ul>
+      </div>
+      
+      <!-- 热点标签&精彩专题 --> 
+      
+      {dede:include filename="y1.htm"/} </div>
+  </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> {dede:include filename="footer.htm"/} 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style2/js/zxjy.js"></script> 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style2/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script> 
+
+<!-- cnzz数据统计 -->
+
+</body>
+</html>

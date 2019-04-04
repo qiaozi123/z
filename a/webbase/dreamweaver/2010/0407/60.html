@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Dreamweaver中加入竖直线的问题_我的网站</title>
+<meta name="keywords" content="Dreamweaver中加入竖直线的问题" />
+<meta name="description" content="网页制作时经常用到1个像素高或宽的细线条来修饰，可以使网页的布局更加清晰，整体更加美观。由于一直习惯使用Dreamweaver编" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/dreamweaver/'>Dreamweaver</a> > Dreamweaver中加入竖直线的问题</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">Dreamweaver中加入竖直线的问题 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=60&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>　　时经常用到1个像素高或宽的细线条来修饰，可以使网页的布局更加清晰，整体更加美观。由于一直习惯使用Dreamweaver编辑网页，所以在阅读《巧妙地在Frontpage中给网页加入一条竖直线》一文后，笔者利用文中的方法二，在Dreamweaver中给网页加入一条竖直线。</p>
+<p>　　依葫芦画瓢，按照《巧妙》一文的所述的方法二，笔者在Dreamweaver中插入表格，设置单元格边距和间距均为0，表格的宽度为1个像素，并设置背景色为蓝色。确认设置无误后，按F12预览，可是网页上并没有如愿出现竖直细线条(如图1)。明明进行了正确的设置却不能实现竖直细线条，真是郁闷！</p>
+<center><img alt="" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F60433540F-32J3.jpg" /></center>
+<p align="center">图1</p>
+<p>　　这是什么原因呢？于是笔者打开Dreamweaver的源代码窗口，经过仔细观察，发现设置为1像素宽的单元格中有个“ ”的标记(如图2)，这个标记是HTML中的转义符，在浏览器输出为一个空格。发现这个标记，笔者终于恍然大悟，原来就是这个标记在作祟！于是删除这个标记后，再次打开网页，竖直细线条终于成功的设置了！</p>
+<center><img alt="" src="http://www.dedecms.com/demoimg/uploads/allimg/c100407/12F604335G340-41247.jpg" /></center>
+<p align="center">图2</p>
+<p>　　在Dreamweaver中插入表格都会自动在每个单元格中加上“ ”的标记，正是因为这个标记，使得设置为1像素宽的单元格在浏览器中显示时多了个空格，把单元格撑大。</p>
+<p>　　另外，《巧妙》一文的方法一使用＜hr＞语句来插入竖直线，笔者觉得有不妥之处，因为＜hr＞语句插入的竖直线上下都会留有空白，并不能在任何时候都满足自己的需要，所以笔者建议尽量使用插入表格的方法来实现。</p>
+<p align="center">&nbsp;</p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/dreamweaver/2010/0408/106.html" rel="similar" title="{dede:招聘启事 标题='织梦大家庭新"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>{dede:招聘启事 标题='织梦大家庭新</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

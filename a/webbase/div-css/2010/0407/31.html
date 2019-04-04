@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>使用CSS为图片添加更多趣味的5种方法_我的网站</title>
+<meta name="keywords" content="趣味,方法,更多,添加,图片,使用," />
+<meta name="description" content="今天我们将向大家分享一些为你平淡乏味的图片添加更多趣味情调的简单技巧。使用Photoshop为每个图片添加某种样式虽然可行，但会是相当乏味且困难的长久工作。下面要介绍的CSS技巧将帮助你从痛苦中解脱出来！如果你也有自己独到的CSS技巧，希望能一同分享。" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/div-css/'>DIV&CSS</a> > 使用CSS为图片添加更多趣味的5种方法</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">使用CSS为图片添加更多趣味的5种方法 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=31&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>今天我们将向大家分享一些为你平淡乏味的图片添加更多趣味情调的简单技巧。使用Photoshop为每个图片添加某种样式虽然可行，但会是相当乏味且困难的长久工作。下面要介绍的CSS技巧将帮助你从痛苦中解脱出来！如果你也有自己独到的CSS技巧，希望能一同分享。</p>
+<h3>阴影效果</h3>
+<p>通过使用带有一些padding之的背景图来添加阴影效果。</p>
+<p style="border: 1px solid rgb(56, 162, 227); padding: 10px 0pt; display: block; background-color: rgb(180, 227, 255); color: rgb(255, 255, 255); text-align: center;"></p>
+<p><strong>HTML</strong></p>
+<blockquote>
+<p><img class=”shadow” src=”sample.jpg” alt=”" /></p>
+</blockquote>
+<p><strong>CSS</strong></p>
+<blockquote>
+<p>img.shadow {<br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;background: url(shadow-1000×1000.gif) no-repeat right bottom;<br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 5px 10px 10px 5px;<br />
+}</p>
+</blockquote>
+<h3>双边框效果</h3>
+<p>这应该是目前最常见的技巧，我们通过以下方式创建说边框。</p>
+<p style="border: 1px solid rgb(56, 162, 227); padding: 10px 0pt; display: block; background-color: rgb(180, 227, 255); color: rgb(255, 255, 255); text-align: center;"></p>
+<p><strong>HTML</strong></p>
+<blockquote>
+<p><img class="double-border" src="sample.jpg" alt="" /></p>
+</blockquote>
+<p><strong>CSS</strong></p>
+<blockquote>
+<p>img.double-border {<br />
+border: 5px solid #ddd;<br />
+padding: 5px; /*Inner border size*/<br />
+background: #fff; /*Inner border color*/<br />
+}</p>
+</blockquote>
+<h3>图片外框效果</h3>
+<p>上有最好的讲解，这个效果是基于在上面层叠一个有透明度的图片的技术。至于IE6的PNG透明度问题，可以参考。</p>
+<p style="border: 1px solid rgb(56, 162, 227); padding: 10px 0pt; display: block; background-color: rgb(180, 227, 255); color: rgb(255, 255, 255); text-align: center;"></p>
+<p><strong>HTML</strong></p>
+<blockquote>
+<p><div class="frame-block"><br />
+<span>&nbsp;</span></p>
+<p><img src="sample.jpg" alt="" /><br />
+</div></p>
+</blockquote>
+<p><strong>CSS</strong></p>
+<blockquote>
+<p>.frame-block {<br />
+position: relative;<br />
+display: block;<br />
+height:335px;<br />
+width: 575px;<br />
+}<br />
+.frame-block span {<br />
+background: url(frame.png) no-repeat center top;<br />
+height:335px;<br />
+width: 575px;<br />
+display: block;<br />
+position: absolute;<br />
+}</p>
+</blockquote>
+<h3>水印效果</h3>
+<p>你可以通过降低主图片的透明度来让背景图片透过来显示的方法添加水印</p>
+<p style="border: 1px solid rgb(56, 162, 227); padding: 10px 0pt; display: block; background-color: rgb(180, 227, 255); color: rgb(255, 255, 255); text-align: center;"></p>
+<p><strong>HTML</strong></p>
+<blockquote>
+<p><div class="transp-block"><br />
+<img class="transparent" src="sample.jpg" alt="" /><br />
+</div></p>
+</blockquote>
+<p><strong>CSS</strong></p>
+<blockquote>
+<p>.transp-block {<br />
+background: #000 url(watermark.jpg) no-repeat;<br />
+width: 575px;<br />
+height: 335px;<br />
+}<br />
+img.transparent {<br />
+filter:alpha(opacity=75);<br />
+opacity:.75;<br />
+}</p>
+</blockquote>
+<h3>为图片添加说明文字</h3>
+<p>使用绝对定位和透明度的设置来添加灵活的说明。</p>
+<p style="border: 1px solid rgb(56, 162, 227); padding: 10px 0pt; display: block; background-color: rgb(180, 227, 255); color: rgb(255, 255, 255); text-align: center;"></p>
+<p><strong>HTML</strong></p>
+<blockquote>
+<p><div class="img-desc"><br />
+<img src="sample.jpg" alt="" /><br />
+<cite>Salone del mobile Milano, April 2008 - Peeta</cite><br />
+</div></p>
+</blockquote>
+<p><strong>CSS</strong></p>
+<blockquote>
+<p>.img-desc {<br />
+position: relative;<br />
+display: block;<br />
+height:335px;<br />
+width: 575px;<br />
+}<br />
+.img-desc cite {<br />
+background: #111;<br />
+filter:alpha(opacity=55);<br />
+opacity:.55;<br />
+color: #fff;<br />
+position: absolute;<br />
+bottom: 0;<br />
+left: 0;<br />
+width: 555px;<br />
+padding: 10px;<br />
+border-top: 1px solid #999;<br />
+}</p>
+</blockquote>
+<p>原文:<br />
+翻译:</p>
+
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

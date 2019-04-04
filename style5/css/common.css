@@ -1,0 +1,53 @@
+﻿body,h1,h2,h3,h4,h5,h6,hr,hr_big,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea{margin:0;padding:0;word-wrap:break-word}
+body{font:12px/1.5 微软雅黑,tahoma,arial,\5b8b\4f53,sans-serif; color:#1c1c1c;}
+img{border:none;vertical-align: bottom;}
+pre {white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; }
+ul,ol,li{list-style:none;}
+
+a{
+	text-decoration: none; color:#1c1c1c; width: 100%; height: 100%;
+}
+.head_wrap{
+	min-width:1180px; width:100%; height:116px; margin:0px auto; overflow: hidden; border-bottom: 4px solid #019973;
+}
+.head{
+	width:1180px; height:116px; margin:0px auto; overflow: hidden;
+}
+.logo{
+	margin:18px auto auto auto; width:400px; float: left;
+}
+.present_position{
+	width:70px; height: 22px; line-height: 20px; border: 1px solid #e5e5e5; font-size:14px; color:#1c1c1c; text-align: center;
+	float: left; margin-top:50px; 
+}
+.current a{
+	color:#009973;
+}
+.menu{
+	width:auto; float:right; margin-top:46px; font-size:16px; position:relative;
+}
+.menu ul{
+	clear: both;
+}
+.menu ul li{
+	float: left; width:auto; padding-right: 25px; padding-left: 25px; height: 32px; text-align: center; line-height:32px;
+	 color:#1b1b1b; font-size:16px; 
+}
+
+.menu ul li span{
+	font-size:12px; color:#777;
+}
+.menu ul li.back,.menu ul li.border_none{
+    border-right: 0px;
+}
+.lavaLampNoImage .back{
+	 display:block; background-color:#009973; height:2px; font-size:15px; z-index: 1; position: absolute; top:34px;
+}
+.togo_askFree{ width:100%; height:70px; background-color: #009973; position:fixed; bottom:0px; left:0px; z-index: 98; }
+.askFree_describe{ font-size: 20px; position: absolute; top:50%; left:20px; margin-top: -20px; }
+.askFree_describe sup{ font-size: 14px; }
+.togo_askFree_1000{ width:1000px; height:70px; margin:0px auto; position: relative; color:#fff; }
+.askFree_describe span{ color:#f6e801; font-size: 24px; }
+.askFree_button{ width:190px; height: 38px; background-color: #f6e801; color:#009973; text-align: center; cursor: pointer; font-size: 24px; position: absolute; top:11px; right:-40px; padding-bottom: 4px; line-height: 1.6; }
+.togo_askFree_close{ width:18px; height: 18px; background: url(img/togo_png.png) -81px -121px; display: block; position: absolute; top:10px; right:6px; cursor: pointer; }
+.float_input{ position: absolute; left: 630px; height: 40px; width: 190px; top: 11px; padding-left: 15px; }

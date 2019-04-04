@@ -1,0 +1,1 @@
+<li> <a href="[field:arcurl/]" rel="similar" title="[field:title/]"> <img width="235" height="168" src="[field:litpic/]" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>[field:title/]</i> </a> </li>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>JavaScript的9个陷阱及评点_我的网站</title>
+<meta name="keywords" content="JavaScript的9个陷阱及评点" />
+<meta name="description" content="来自Nine Javascript Gotchas, 以下是JavaScript容易犯错的九个陷阱。虽然不是什么很高深的技术问题，但注意一下，会使您的编程轻松些，即所谓make life easier. 笔者对某些陷阱会混杂一些评点。" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/javascript-ajax/'>Javascript/Ajax</a> > JavaScript的9个陷阱及评点</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">JavaScript的9个陷阱及评点 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=43&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>来自, 以下是JavaScript容易犯错的九个陷阱。虽然不是什么很高深的技术问题，但注意一下，会使您的编程轻松些，即所谓make life easier. 笔者对某些陷阱会混杂一些评点。</p><ol><li><h2>最后一个逗号</h2><p>如这段代码，注意最后一个逗号，按语言学角度来说应该是不错的（python的类似数据类型辞典dictionary就允许如此）。IE会报语法错误，但语焉不详，你只能用人眼从几千行代码中扫描。</p><pre><code><script>
+  var theObj = {
+        city : "Boston",
+        state : "MA",
+  }
+</script> </code></pre></li><li><h2><span><font face="NSimsun">this</font></span>的引用会改变</h2><p>如这段代码：</p><pre><code><input type="button" value="Gotcha!" id="MyButton" >
+<script>
+var MyObject = function () {
+    this.alertMessage = "Javascript rules";
+    this.ClickHandler = function() {
+        <strong style="COLOR: red">alert(this.alertMessage );</strong>
+  }
+}();
+document.getElementById(”theText”).onclick =  MyObject.ClickHandler
+</script></code></pre><p>并不如你所愿，答案并不是”JavaScript rules”。在执行<span><font face="NSimsun">MyObject.ClickHandler</font></span>时，代码中红色这行，<span><font face="NSimsun">this</font></span>的引用实际上指向的是<span><font face="NSimsun">document.getElementById("theText")</font></span>的引用。可以这么解决：</p><pre><code><input type="button" value="Gotcha!" id="theText" >
+<script>
+var MyObject = function () {
+    <strong style="COLOR: red">var self = this;</strong></span />
+    this.alertMessage = “Javascript rules”;
+    this.OnClick = function() {
+        alert(self.value);
+    }
+}();
+document.getElementById(”theText”).onclick =  MyObject.OnClick
+</script></code></pre><p>实质上，这就是。如果你看过，你会发现解决方案不止一种。</p></li><li><h2>标识盗贼</h2><p>在JavaScript中不要使用跟HTML的id一样的变量名。如下代码：</p><pre><code><input type="button" id="TheButton">
+<script>
+    TheButton = get("TheButton");
+</script></code></pre><p>IE会报对象未定义的错误。我只能说：IE sucks.</p></li><li><h2>字符串只替换第一个匹配</h2><p>如下代码：</p><pre><code><script>
+    var fileName = "This is a title".replace(" ","_");
+</script></code></pre><p>而实际上，结果是”<span><font face="NSimsun">This_is a title</font></span>“. 在JavaScript中，<span><font face="NSimsun">String.replace</font></span>的第一个参数应该是正则表达式。所以，正确的做法是这样：</p><pre><code>var fileName = "This is a title".replace(/ /g,"_");</code></pre></li><li><h2>mouseout意味着mousein</h2><p>事实上，这是由于事件冒泡导致的。IE中有<span><font face="NSimsun">mouseenter</font></span>和<span><font face="NSimsun">mouseleave</font></span>，但不是标准的。作者在此建议大家使用库比如YUI来解决问题。</p></li><li><h2><span><font face="NSimsun">parseInt</font></span>是基于进制体系的</h2><p>这个是常识，可是很多人给忽略了<span><font face="NSimsun">parseInt</font></span>还有第二个参数，用以指明进制。比如，<span><font face="NSimsun">parseInt("09")</font></span>，如果你认为答案是9，那就错了。因为，在此，字符串以0开头，<span><font face="NSimsun">parseInt</font></span>以八进制来处理它，在八进制中，<span><font face="NSimsun">09</font></span>是非法，返回<span><font face="NSimsun">false</font></span>，布尔值<span><font face="NSimsun">false</font></span>转化成数值就是0. 因此，正确的做法是<span><font face="NSimsun">parseInt("09", 10)</font></span>. </p></li><li><h2><span><font face="NSimsun">for...in...</font></span>会遍历所有的东西</h2><p>有一段这样的代码：</p><pre><code>var arr = [5,10,15]
+var total = 1;
+for ( var x in arr) {
+    total = total * arr[x];
+}</code></pre><p>运行得好好的，不是吗？但是有一天它不干了，给我返回的值变成了<span><font face="NSimsun">NaN</font></span>, 晕。我只不过引入了一个库而已啊。原来是这个库改写了<span><font face="NSimsun">Array</font></span>的<span><font face="NSimsun">prototype</font></span>，这样，我们的<span><font face="NSimsun">arr</font></span>平白无过多出了一个属性（方法），而<span><font face="NSimsun">for...in...</font></span>会把它给遍历出来。所以这样做才是比较安全的：</p><pre><code>for ( var x = 0; x < arr.length; x++) {
+    total = total * arr[x];
+}</code></pre><p>其实，这也是污染基本类的<span><font face="NSimsun">prototype</font></span>会带来危害的一个例证。</p></li><li><h2>事件处理器的陷阱</h2><p>这其实只会存在使用作为对象属性的事件处理器才会存在的问题。比如<font face="NSimsun"><span>window.onclick = MyOnClickMethod</span><span>这样的代码，这会复写掉之前的</span><span>window.onclick</span></font>事件，还可能导致IE的内容泄露（sucks again）。在IE还没有支持DOM 2的事件注册之前，作者建议使用库来解决问题，比如使用YUI:</p><pre><code>YAHOO.util.Event.addListener(window, "click", MyOnClickMethod);</code></pre><p>这应该也属于常识问题，但新手可能容易犯错。</p></li><li><h2>Focus Pocus</h2><p>新建一个<span><font face="NSimsun">input</font></span>文本元素，然后把焦点挪到它上面，按理说，这样的代码应该很自然：</p><pre><code>var newInput = document.createElement("input");
+document.body.appendChild(newInput);
+newInput.focus();
+newInput.select();</code></pre><p>但是IE会报错（sucks again and again）。理由可能是当你执行<span><font face="NSimsun">fouce()</font></span>的时候，元素尚未可用。因此，我们可以延迟执行：</p><pre><code>var newInput = document.createElement("input");
+newInput.id = "TheNewInput";
+document.body.appendChild(newInput);
+setTimeout(function(){ //这里我使用闭包改写过，若有兴趣可以对比原文
+	document.getElementById('TheNewInput').focus();
+	document.getElementById('TheNewInput').select();}, 10);</code></pre></li></ol><p>在实践中，JavaScript的陷阱还有很多很多，大多是由于解析器的实现不到位而引起。这些东西一般都不会在教科书中出现，只能靠开发者之间的经验分享。谢天谢地，我们生活在网络时代，很多碰到的问题，一般都可以在Google中找到答案。 </p><p>来源:</p>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/javascript-ajax/2010/0407/35.html" rel="similar" title="用JavaScript的日期对象操控时间和日"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>用JavaScript的日期对象操控时间和日</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/43.html" rel="similar" title="JavaScript的9个陷阱及评点"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>JavaScript的9个陷阱及评点</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/52.html" rel="similar" title="完全了解AJAX"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>完全了解AJAX</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

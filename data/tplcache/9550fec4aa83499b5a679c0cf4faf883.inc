@@ -1,0 +1,1 @@
+<dt><a id="ing" href='[field:typeurl/]'><s></s>[field:typename/]</a></dt>

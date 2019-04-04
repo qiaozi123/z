@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<link href="/style/css/togo.css" rel="stylesheet" type="text/css" />
+	<link href="/style/css/carousel.css" rel="stylesheet" type="text/css">
+	<title>{dede:global.cfg_webname/}</title>
+	<meta name="description" content="{dede:global.cfg_description/}" />
+	<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+	<meta name="author" content="order by dede58.com" />
+	<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+	<script type="text/javascript" src="/style/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/style/js/carousel.js"></script>
+	<script type="text/javascript" src="/style/js/mtogo.js"></script>
+	<script>
+
+		//声明_czc对象:
+
+		var _czc = _czc || [];
+
+		//绑定siteid
+
+		_czc.push(["_setAccount", "1255110153"]);
+
+		
+
+	</script>
+	</head>
+
+	<body>
+<div class="head_wrap">
+      <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    <div class="menu">
+          <ul class="lavaLampNoImage">
+        <li class="current"><a href="/">首&nbsp;&nbsp;页</a></li>
+        {dede:channel type='top' row='4' }
+        <li><a href='[field:typeurl/]' target="_blank">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+        </div>
+  </div>
+    </div>
+<div >
+      <div class="index_banner">
+    <div class="banner_con"> <img src="/style/images/new_banner_01.jpg" border="0" /> <img src="/style/images/new_banner_02.jpg" border="0" /> <img src="/style/images/new_banner_03.jpg" border="0" />
+          <div class="banner_apply">
+          <img src="/style/images/banner_apply_title.jpg" style="width: 260px; margin-top: 55px;" />
+          <div class="sec">
+        <p>3套装修方案对比，省40%装修款</p>
+      </div>
+          <div class="form">
+          <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <label>面积</label>
+        <select name='mj' class="measureSize">
+              <option value='建筑面积'>建筑面积</option>
+              <option value='小于70平方'>小于70平方</option>
+              <option value='70-120平方'>70-120平方</option>
+              <option value='大于120平方'>大于120平方</option>
+            </select>
+        <label>电话</label>
+        <input type='text' name='tel' id='tel' placeholder="您的电话" value=''/>
+        <input type="hidden" name="dede_fields" value="name,text;tel,text;mj,select" />
+        <input type="hidden" name="dede_fieldshash" value="8ec3f4ae9d2ddfd84516e0a18c0bbfad" />
+        <img  src="/style/images/wrong_icon.png" class="banner_wrong" />
+        <input type="submit" name="submit" value="免费申请" class="btn"/ style="background-color:#f7ab00; color:#FFF; font-size:20px">
+        </div>
+        <p class="apply_tel">全国统一客服：400 8617 000</p>
+        </div>
+      </form>
+        </div>
+  </div>
+      <script>
+
+            $(".index_banner").css({"position": "relative","top":"0px"});
+
+        </script> 
+      <script>
+
+        //报名定位
+
+        var right = ($(window).width() - 1180) / 2 + 'px';
+
+        $(".banner_apply").css("right", right);
+
+        </script> 
+    </div>
+<div class="togo_advantage_wrap">
+      <ul class="togo_advantage">
+    {dede:myad name='1'/}
+  </ul>
+    </div>
+<div class="wrapper">
+      <div class="content_title">
+    <h2>免费服务 </h2>
+    <span class="subtitle">3套装修方案对比，省40%装修款</span> <em class="title_before"></em> <em class="title_after"></em> </div>
+      <div class="serve_container">
+    <div class="serve_left">
+          <div class="serve_left_li">
+        <ul>
+              <li id="freelf" class="lifocus ifocus"> <span class="icons ilf ilf_a"></span>
+            <p>免费量房</p>
+          </li>
+              <li id="freesj"> <span class="icons isj"></span>
+            <p>免费设计</p>
+          </li>
+              <li id="freebj"> <span class="icons ibj"></span>
+            <p>免费报价</p>
+          </li>
+              <li id="freejl"> <span class="icons ijl"></span>
+            <p>免费监理</p>
+          </li>
+            </ul>
+      </div>
+          <div class="content_container">
+        <div class="serve_left_content" style="margin-top:-1px">
+              <div class=" title_bg_lf">
+            <p class="title">专业设计师上门量房 <br />
+                  确保设计方案合理、报价准确</p>
+          </div>
+              <img src="/style/images/index_serve_lf.png" />
+              <div class="form">
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                  <input type="hidden" name="action" value="post" />
+                  <input type="hidden" name="diyid" value="1" />
+                  <input type="hidden" name="do" value="2" />
+                  <label>面积</label>
+                  <select name='mj' class="measureSize">
+                <option value='建筑面积'>建筑面积</option>
+                <option value='小于70平方'>小于70平方</option>
+                <option value='70-120平方'>70-120平方</option>
+                <option value='大于120平方'>大于120平方</option>
+              </select>
+                  <label>电话</label>
+                  <input value="" placeholder="您的电话" name='tel' id='tel' />
+                  <input type="hidden" name="dede_fields" value="name,text;tel,text;mj,select" />
+                  <input type="hidden" name="dede_fieldshash" value="8ec3f4ae9d2ddfd84516e0a18c0bbfad" />
+                  <img class="serve_wrong_lf" src="/style/images/wrong_icon.png"/>
+                  <input type="submit" name="submit" value="免费申请" class="btn btn-1 btn-1b"  style="background-color:#009973; color:#FFF; font-size:20px"/>
+                </form>
+            <p class="num"><span class="ifocus">908517</span>业主的共同选择</p>
+          </div>
+            </div>
+        <div class="serve_left_content">
+              <div class="title_bg_sj">
+            <p class="title">专业设计师量身设计 <br/>
+                  <span class="togo_color">3份</span>设计方案比较，选取最满意设计稿</p>
+          </div>
+              <img src="/style/images/index_serve_sj.png" style="margin-left: 45px;" />
+              <div class="form" style="margin-top:9px;">
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                  <input type="hidden" name="action" value="post" />
+                  <input type="hidden" name="diyid" value="1" />
+                  <input type="hidden" name="do" value="2" />
+                  <label>面积</label>
+                  <select name='mj' class="measureSize">
+                <option value='建筑面积'>建筑面积</option>
+                <option value='小于70平方'>小于70平方</option>
+                <option value='70-120平方'>70-120平方</option>
+                <option value='大于120平方'>大于120平方</option>
+              </select>
+                  <label>电话</label>
+                  <input value="" placeholder="您的电话" name='tel' id='tel' />
+                  <input type="hidden" name="dede_fields" value="name,text;tel,text;mj,select" />
+                  <input type="hidden" name="dede_fieldshash" value="8ec3f4ae9d2ddfd84516e0a18c0bbfad" />
+                  <img class="serve_wrong_lf" src="/style/images/wrong_icon.png"/>
+                  <input type="submit" name="submit" value="免费申请" class="btn btn-1 btn-1b"  style="background-color:#009973; color:#FFF; font-size:20px"/>
+                </form>
+            <p class="num"><span class="ifocus">908517</span>业主的共同选择</p>
+          </div>
+            </div>
+        <div class="serve_left_content">
+              <div class="title_bg_bj">
+            <p class="title">正规装修公司<span class="togo_color">3份</span>报价方案比较 <br />
+                  拒绝恶意增项，配置清楚，价格透明</p>
+          </div>
+              <img src="/style/images/index_serve_bj.png" style="margin-left:45px; margin-right: 20px;" />
+              <div class="form">
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                  <input type="hidden" name="action" value="post" />
+                  <input type="hidden" name="diyid" value="1" />
+                  <input type="hidden" name="do" value="2" />
+                  <label>面积</label>
+                  <select name='mj' class="measureSize">
+                <option value='建筑面积'>建筑面积</option>
+                <option value='小于70平方'>小于70平方</option>
+                <option value='70-120平方'>70-120平方</option>
+                <option value='大于120平方'>大于120平方</option>
+              </select>
+                  <label>电话</label>
+                  <input value="" placeholder="您的电话" name='tel' id='tel' />
+                  <input type="hidden" name="dede_fields" value="name,text;tel,text;mj,select" />
+                  <input type="hidden" name="dede_fieldshash" value="8ec3f4ae9d2ddfd84516e0a18c0bbfad" />
+                  <img class="serve_wrong_lf" src="/style/images/wrong_icon.png"/>
+                  <input type="submit" name="submit" value="免费申请" class="btn btn-1 btn-1b"  style="background-color:#009973; color:#FFF; font-size:20px"/>
+                </form>
+            <p class="num"><span class="ifocus">908517</span>业主的共同选择</p>
+          </div>
+            </div>
+        <div class="serve_left_content">
+              <div class="title_bg_jl">
+            <p class="title" style="font-size: 22px; padding-left:10px; line-height: 1.7"><span class="togo_color">资深监理</span>免费上门验收<br />
+                  及时解决一切施工问题，最大程度确保施工质量</p>
+          </div>
+              <img src="/style/images/index_serve_jl.png" style="margin-left:25px;margin-right: 15px" />
+              <div class="form">
+            <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+                  <input type="hidden" name="action" value="post" />
+                  <input type="hidden" name="diyid" value="1" />
+                  <input type="hidden" name="do" value="2" />
+                  <label>面积</label>
+                  <select name='mj' class="measureSize">
+                <option value='建筑面积'>建筑面积</option>
+                <option value='小于70平方'>小于70平方</option>
+                <option value='70-120平方'>70-120平方</option>
+                <option value='大于120平方'>大于120平方</option>
+              </select>
+                  <label>电话</label>
+                  <input value="" placeholder="您的电话" name='tel' id='tel' />
+                  <input type="hidden" name="dede_fields" value="name,text;tel,text;mj,select" />
+                  <input type="hidden" name="dede_fieldshash" value="8ec3f4ae9d2ddfd84516e0a18c0bbfad" />
+                  <img class="serve_wrong_lf" src="/style/images/wrong_icon.png"/>
+                  <input type="submit" name="submit" value="免费申请" class="btn btn-1 btn-1b"  style="background-color:#009973; color:#FFF; font-size:20px"/>
+                </form>
+          </div>
+            </div>
+      </div>
+        </div>
+    <div class="serve_right">
+          <ul class="top">
+        {dede:type typeid='46'}
+        <li>[field:typename/]</li>
+        {/dede:type} 
+        <!--<li>电话</li>
+        <li>装修预算</li>
+        <li>装修面积</li>-->
+      </ul>
+          <ul id="customer">
+        <div class="roll"> {dede:arclist typeid='46' row='25' titlelen='50' orderby='pubdate'}
+              <li>
+            <ul>
+                  <li><a href="[field:arcurl/]">[field:title/]</a></li>
+                  <li></li>
+                  <li></li>
+                  <li>[field:pubdate function="MyDate('Y-m-d',@me)"/]</li>
+                </ul>
+          </li>
+              {/dede:arclist} 
+              
+              <!--{dede:myad name='2'/}--> </div>
+      </ul>
+        </div>
+  </div>
+      <div class="content_title" id="scroll_pos">
+    <h2>精选套餐 </h2>
+    <span class="subtitle">最优配置，绝无增项，一价全包！</span> <em class="title_before"></em> <em class="title_after"></em> </div>
+      <ul class="Optimization">
+    {dede:arclist row=13 titlelen=32 noflag='h' typeid='46'}
+    <li> <a href="[field:arcurl/]" target="_blank">
+      <div class="opt_left"> <img src="[field:litpic/]" border="0" /> <em class="opt_mask_left"></em> <em class="opt_mask_right"></em>
+        <div class="border_white"></div>
+      </div>
+      <div class="opt_right">
+        <div class="opt_title"> [field:title/] </div>
+        <div class="opt_price"> <span>全包价</span> <sub>￥</sub> [field:shorttitle/] <sup>2</sup> </div>
+        <div class="opt_describe"> [field:description function='cn_substr(@me,120)'/] </div>
+        <span class="plan_details"><i></i>套餐详情</span> </div>
+      </a> </li>
+    {/dede:arclist}
+  </ul>
+      <div class="content_title">
+    <h2>服务流程 </h2>
+    <span class="subtitle">8步轻松搞定装修</span> <em class="title_before"></em> <em class="title_after"></em> </div>
+      <ul class="process">
+    {dede:myad name='3'/}
+  </ul>
+    </div>
+{dede:include filename="f1.htm"/}
+<div class="togo_askFree">
+      <div class="togo_askFree_1000">
+    <div class="askFree_describe">已有<span>908517</span>业主申请免费量房、设计，免费装修管家！</div>
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+          <input type="hidden" name="action" value="post" />
+          <input type="hidden" name="diyid" value="1" />
+          <input type="hidden" name="do" value="2" />
+          <input class="float_input" value="" placeholder="您的电话" type='text' name='tel' id='tel'>
+          <input type="hidden" name="dede_fields" value="name,text;tel,text;mj,select" />
+          <input type="hidden" name="dede_fieldshash" value="8ec3f4ae9d2ddfd84516e0a18c0bbfad" />
+          <input type="submit" name="submit" value="免费申请" class="askFree_button" />
+        </form>
+    <img class="float_wrong" src="/style/images/wrong_icon.png"/> </div>
+      <em class="togo_askFree_close"></em> </div>
+<div class="mask"></div>
+<div class="togo_float_right">
+      <ul>
+    <li class="return_top"><i class="float_right_top"></i></li>
+    
+    <!--  <li class="float_right_bm"><span>免费申请</span></li> -->
+    
+    <li><i class="float_right_ewm"></i>
+          <div class="float_right_ewm_div"><img src="/style/images/togo_ewm.jpg" border="0px" /></div>
+        </li>
+    <li id="cs_box"><i class="cs_img"></i></li>
+  </ul>
+    </div>
+<script type="text/javascript">
+
+		var _mvq = window._mvq || []; 
+
+		window._mvq = _mvq;
+
+		_mvq.push(['$setAccount', 'm-121645-0']);
+
+
+
+		_mvq.push(['$setGeneral', '', '', /*用户名*/ '', /*用户id*/ '']);//如果不传用户名、用户id，此句可以删掉
+
+		_mvq.push(['$logConversion']);
+
+		(function() {
+
+			var mvl = document.createElement('script');
+
+			mvl.type = 'text/javascript'; mvl.async = true;
+
+			mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+
+			var s = document.getElementsByTagName('script')[0];
+
+			s.parentNode.insertBefore(mvl, s); 
+
+		})();	
+
+
+
+	</script> 
+<script type="text/javascript" src="/style/js/banner.js"></script> 
+<script type="text/javascript" src="/style/js/togo.js"></script> 
+<script type="text/javascript" src="/style/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        /*导航条*/
+
+        $(".lavaLampNoImage").lavaLamp({
+
+            fx: "backout",
+
+            speed: 700,
+
+            n: 0,
+
+            click: function(event, menuItem) {
+
+                return false;
+
+            }
+
+        });
+
+    });
+
+    /*图片慢加载*/
+
+    jQuery(document).ready(
+
+        function($) {
+
+            $("img").lazyload({
+
+                placeholder: "/images/grey.gif",
+
+                effect: "fadeIn",
+
+                threshold: 200
+
+            });
+
+        }
+
+    );
+
+    /*发起qq聊天*/
+
+    myEvent(window, 'load', function() {
+
+        cs_box.set({
+
+            qq: '362696369' //设置QQ号码
+
+        });
+
+    });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>用 Dreamweaver 8 搞定web标准_我的网站</title>
+<meta name="keywords" content="用,Dreamweaver,8,搞定web标准" />
+<meta name="description" content="如果您正在读这篇文章，您很可能是已经对 Web 标准有了一定的兴趣，并且对用 DW ( Dreamweaver 的简称)来构建的站点中标准的应用非常好奇。" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/dreamweaver/'>Dreamweaver</a> > 用 Dreamweaver 8 搞定web标准</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">用 Dreamweaver 8 搞定web标准 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=55&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>&nbsp;　　译者序:这个系列原文一共8篇文章，从普及 Web Standards 入手，讲述如何用 Dreamweaver 8 来构建符合标准的 Web ，由于原作者的此篇文章是对《Build Your Own Standards Compliant Website Using Dreamweaver 8 》(这篇文章是收费的)的摘录，所以我对内容进行了适当的删改，顺序与原文是一致的，但篇幅会有调整，特此告知。翻译水平有限，敬请谅解。 </p><p>　　如果您正在读这篇文章，您很可能是已经对 Web 标准有了一定的兴趣，并且对用 DW ( Dreamweaver 的简称)来构建的站点中标准的应用非常好奇。 </p><p>　　或许您已经对 WS (Web Standards的简称)有了一定的了解，但是您并不知道如何用 DW 来编写可兼容的代码。或者您是一个 DW 用户，您很想遵从 WS ，更广泛的使用 CSS ，并且可以制作出更有亲和力的文档。无论您是哪一种类型，这篇文章都会给您想要的答案:告诉您如何用 DW 来搞定 WS。 </p><p>　　Web 标准的定义 </p><p>　　就我们在整篇文章所关心的 WS 来说，让我们首先花一点时间来明确一下我们究竟在谈论些什么: </p><p>　　WS 是一些指导 Web 开发语言的规范，是由 W3C 所制定的。这些规范包含了多种语言，例如，HTML、XHTML 和 CSS 还有一些其他的相关语言，例如 MathML，用来表示数学中的方程，当你有这种特殊的需要的时候，或许会用得上。W3C 也颁布了“Web 内容亲和力指南”(Web Content Accessibility Guidelines —— WCAG)——推广网页的可访问性(通过 WAI ) </p><p>　　提示:直接获取这些规范 </p><p>　　你可以在 W3C 的网站上阅读这些规范，尽管他们有时读起来还是有些困难的: </p><p>　　HTML 4.01 </p><p>　　XHTML 1.0 </p><p>　　CSS 1 </p><p>　　CSS 2.1 </p><p>　　WCAG 1.0 </p><p>　　在本文中，我们将会用到 XHTML1.0、CSS1 和 2.1、WCAG 1.0 等规范和建议，但是你一定很高兴知道我们其实不必过多的阅读 W3C 文档。 </p><p>　　谁需要 WS ? </p><p>　　您可能只有一个含糊的概念:WS 是个好东西，但是许多网站——包括许多知名的站点——并不遵从 WS ，并且他们看起来的确管理得很好。所以，为什么我们要尽力去遵从 WS 呢?这么做会有什么真正的收益吗?谁需要 WS ?谁需要去关注 W3C 的规范与建议? </p><p>　　Web 开发者与设计者 </p><p>　　需要关注 WS 的首类人群就是我们:网站建设的开发者与设计者。花费时间去学习如何用 WS 开发对于我们来说值得吗? </p><p>　　整洁的标记使 BUG 的修复速度加快。 </p><p>　　如果您通过 W3C 校验您的页面，至少您会了解到不规范的标记并不是引起您曾经遇到过的错误的原因。有时，校验一个页面和修复已发现错误的过程，可以清除显示中遇到一些问题，这些问题是由标记(element)没有结束或标签(tag)拼写错误引起的。 </p><p>　　即使校验您的文档并没有修正这些问题，至少你会知道这些问题存在于规范的文档中。既然你已经知道这个问题不是一个错误，那么你可以开始关注其他的问题了，例如在不同的浏览器中 CSS 处理差异问题。 </p><p>　　遵从可访问性的需求很容易 </p><p>　　如果你编写一个规范的 XHTML 标记，那么你就可以保证文档在语义上是无误的，并且您可以把文档中的内容与表现相分离，您将可以把大量的工作放在许多 WCAG1.0 中所列的可访问性的问题上。认识到可访问性并不是仅仅为残疾人设计的这一点也很重要。一个亲和力好的站点是可以被许多不同的设备访问的，例如移动电话和 PDA ，他们是不具备强大的处理能力去对付那些散乱而非标准的标记的。 </p><p>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/dreamweaver/2010/0408/106.html" rel="similar" title="{dede:招聘启事 标题='织梦大家庭新"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>{dede:招聘启事 标题='织梦大家庭新</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

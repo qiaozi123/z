@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+{dede:include filename="head.htm"/} 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+{dede:include filename="hd1.htm"/} 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> {dede:field name='position'/}{dede:field.title/}</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">{dede:field.title/} <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> {dede:field.body/} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          {dede:arclist flag='c' titlelen=42 row=3}
+          <li> <a href="[field:arcurl/]" rel="similar" title="[field:title/]"> <img width="235" height="168" src="[field:litpic/]" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>[field:title/]</i> </a> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    {dede:include filename="y1.htm"/} </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> {dede:include filename="footer.htm"/} 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

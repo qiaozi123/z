@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" media="all" href="{dede:global.cfg_cmsurl/}/style4/css/style.css" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style4/css/common.css" type="text/css" media="screen" />
+
+<!-- script START -->
+
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style4/js/jquery-1.10.2.min.js"></script>
+<style type="text/css">
+.recentcomments a {
+	display: inline !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+</style>
+</head>
+
+<body>
+
+<!--Header--> 
+
+<!-- header start --> 
+
+{dede:include filename="head.htm"/} 
+
+<!--Header End-->
+
+<div class="content">
+  <div class="center">
+    <div class="center_left">
+      <div id="xz_content" style="display: none;"> </div>
+      <ul>
+        {dede:arclist flag='c' titlelen=42 row=6 typeid='4'}
+        <li>
+          <div class="info"> <a href="javascript:void(0)">
+            <div class="info_left"> [field:typelink/] </div>
+            </a>
+            <div class="info_right">
+              <ul class="zc">
+                <li class="zc_jiantou"><img src="/style4/images/jiantou.png" width="19" height="25" /> </li>
+                <li class="zc_neirong">
+                  <dl class="zc_dl">
+                    <dd class="zc_title"> [field:title/] </dd>
+                    <dd> <a href="[field:arcurl/]"> <img src="[field:litpic/]" data-original="[field:litpic/]" alt="[field:title/]" width="535" height="230" /> </a> </dd>
+                    <dd class="zc_info_sj"> <a href="[field:arcurl/]">
+                      <p class="wp-caption-text"> <i>“</i> [field:description function='cn_substr(@me,180)'/] <i>”</i> </p>
+                      </a>
+                      <div class="djl"> 
+                        
+                        <!--&nbsp;|&nbsp;&nbsp;--><img src="/style4/images/eyes.png" width="18" height="10" /> [field:click/] </div>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    
+    <!-- 右侧导航 --> 
+    
+    <!-- 右侧导航 --> 
+    
+    {dede:include filename="fd.htm"/} </div>
+</div>
+{dede:include filename="head.htm"/}
+</div>
+
+<!--Container End--> 
+
+{dede:include filename="footer.htm"/} 
+
+<!-- /footer --> 
+
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style4/js/pic.min.js"></script> 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style4/js/zxmt.js"></script> 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style4/js/jquery.lazyload.js"></script> 
+<script>
+
+jQuery(document).ready(
+
+	function($){
+
+		$("img").lazyload({
+
+			placeholder : "{dede:global.cfg_cmsurl/}/style4/images/grey.gif",
+
+			effect : "fadeIn",
+
+			threshold : 200
+
+		});
+
+	}
+
+);
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:2,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+</script>
+</body>
+</html>

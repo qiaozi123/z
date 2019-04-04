@@ -1,0 +1,144 @@
+﻿/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+body, h1, h2, h3, h4, h5, h6, hr, hr_big, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea {
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word
+}
+body {
+	font: 12px/1.5 微软雅黑, tahoma, arial, \5b8b\4f53, sans-serif;
+	color: #444;
+}
+img {
+	border: none
+}
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+h1 {
+	font-size: 100%;
+	font-weight: 100;
+}
+input.dialog {
+	height: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border: none
+}
+h1 {
+	font-size: 34px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 18px;
+	font-weight: 100;
+}
+h4 {
+	font-size: 25px;
+	font-weight: normal;
+	text-align: center;
+	line-height: 35px;
+	color: #444;
+}
+h5 {
+	font-size: 14px;
+	color: #aaa;
+	font-weight: 100;
+}
+.font-fixh {
+	font-family: Georgia, Arial;
+	color: #f00;
+	font-size: 16px;
+	font-weight: 700;
+}
+address, cite, dfn, em, var {
+	font-style: normal;
+}
+code, kbd, pre, samp {
+	font-family: courier new, courier, monospace;
+}
+ul, ol, li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #1c1c1c;
+	width: 100%;
+	height: 100%;
+}
+.head_wrap {
+	min-width: 1180px;
+	width: 100%;
+	height: 116px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.head {
+	width: 1180px;
+	height: 116px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.logo {
+	margin: 18px auto auto auto;
+	width: 400px;
+	float: left;
+}
+.present_position {
+	width: 70px;
+	height: 22px;
+	line-height: 20px;
+	border: 1px solid #e5e5e5;
+	font-size: 14px;
+	color: #1c1c1c;
+	text-align: center;
+	float: left;
+	margin-top: 50px;
+}
+.current a {
+	color: #009973;
+}
+.togo_menu {
+	width: auto;
+	float: right;
+	margin-top: 46px;
+	font-size: 16px;
+	position: relative;
+}
+.togo_menu ul {
+	clear: both;
+}
+.togo_menu ul li {
+	float: left;
+	width: auto;
+	padding-right: 25px;
+	padding-left: 25px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+	color: #1b1b1b;
+	font-size: 16px;
+}
+.togo_menu ul li span {
+	font-size: 12px;
+	color: #777;
+}
+.togo_menu ul li.back, .togo_menu ul li.border_none {
+	border-right: 0px;
+}
+.lavaLampNoImage .back {
+	display: block;
+	background-color: #009973;
+	height: 2px;
+	font-size: 15px;
+	z-index: 1;
+	position: absolute;
+	top: 34px;
+}

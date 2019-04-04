@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>5种方法立刻写出更好的CSS代码_我的网站</title>
+<meta name="keywords" content="代码,更好,立刻,方法,元素,CSS," />
+<meta name="description" content="当然，每个人都可以编写CSS代码，甚至你现在已经让它为你的项目工作了。但是CSS还可以更好吗？开始用这5个Tips改进你的CSS吧！ 1.重置 首先，很认真的告诉你， 总是要重置某些分类 。无论你是使用 Eric Meyer Reset 、 YUI Reset 或者你自己编写的重置代码，" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/div-css/'>DIV&CSS</a> > 5种方法立刻写出更好的CSS代码</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">5种方法立刻写出更好的CSS代码 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=21&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>当然，每个人都可以编写CSS代码，甚至你现在已经让它为你的项目工作了。但是CSS还可以更好吗？开始用这5个Tips改进你的CSS吧！</p>
+<h3>1.重置</h3>
+<p>首先，很认真的告诉你，<strong>总是要重置某些分类</strong>。无论你是使用 、或者你自己编写的重置代码，只要使用就对了。</p>
+<p>它能很简单的移除所有元素的填充（padding）和边距（margin）：</p>
+<ol>
+    <li>html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,</li>
+    <li>pre, form, fieldset, table, th, td { margin: 0; padding: 0; }</li>
+</ol>
+<p>Eric Meyer Reset和YUI Reset都是非常强大的，但是对于我而言，它们走的太远了。我觉得你最终需要重置一切，然后重新定义所有元素的属性。这就是为什么Eric Meyer推荐更有效的使用（重置样式表），而你不要只是使用他的重置样式表，将它拖放到你的项目中。调整它（的重置样式表），建立属于自己的重置样式 表。</p>
+<p>噢，请停止使用：</p>
+<p>* { margin: 0; padding: 0; }</p>
+<p>花更多的时间去制作它，当你移除了填充（padding）你认为单选按钮会发生什么变化？表单元素有时能够做些时髦的事情，所以最有效的方式就是将他们独立。</p>
+<h3>2.排序</h3>
+<p><strong>一个小的测试</strong><br />
+这个例子就是要让你思考如何更快的<strong>找到右边距属性</strong>？</p>
+<p><strong>Example#1</strong></p>
+<p><code><br />
+div#header h1 {<br />
+z-index: 101;<br />
+color: #000;<br />
+position: relative;<br />
+line-height: 24px;<br />
+margin-right: 48px;<br />
+border-bottom: 1px solid #dedede;<br />
+font-size: 18px;<br />
+}<br />
+</code></p>
+<p><strong>Example#2</strong></p>
+<p><code><br />
+div#header h1 {<br />
+border-bottom: 1px solid #dedede;<br />
+color: #000;<br />
+font-size: 18px;<br />
+line-height: 24px;<br />
+margin-right: 48px;<br />
+position: relative;<br />
+z-index: 101;<br />
+}<br />
+</code></p>
+<p>你不能告诉我Example#2不能更快的找到右边距属性。根据字母排序你的元素属性。一致的创建你的CSS，将帮助你节省花费在寻找一个特殊属性的时间。</p>
+<p>我知道一些人用这样的方法去组织代码，其他人又用另一种方法去组织，但是在我的公司，我们协商一致做出决定，所有的代码都将按照字母排序来组织。通过这样组织代码与其他人协同工作一定是有帮助的。当我碰到属性没有按照字母排序的层叠样式表我每一次都会退缩。</p>
+<h3>3.组织</h3>
+<p>你应该组织你的样式表以致相关的内容靠在一起，更简单的找到想要的。使用更有效的注解。举个例子，这是我如何构造我的层叠样式表：</p>
+<p>/*****Reset*****/<br />
+移除元素的填充（padding）和边距（margin）。<br />
+/*****Basic Elements*****/<br />
+定义基本元素的样式: body, h1-h6, ul, ol, a, p, 等.<br />
+/*****Generic Classes*****/<br />
+定义简单的风格，好像浮动的某一侧, 移除元素的下边距, 等当然，它们大部分都与我们希望的语义不相关,但是它们是高效处理代码所必须的。<br />
+/*****Basic Layout*****/<br />
+定义基本的模板: header, footer等. 帮助定义网页布局的基本元素<br />
+/*****Header*****/<br />
+定义所有Hearder元素<br />
+/*****Content*****/<br />
+定义所有内容框内的元素<br />
+/*****Footer*****/<br />
+定义所有Footer的元素<br />
+/*****Etc*****/<br />
+定义其他的选择器。通过注解和归类相似元素的分组，将更快的找到你想要的。</p>
+<h3>4.一致性</h3>
+<p>无论你决定使用什么方式去编写代码，保持一致。我已经对全部放在1行VS多行的CSS编写编写方式的争论感到乏味和疲倦。这是不需要争辩的。每个人都有自己的观点，所以选择一种你喜欢的工作方式，并在所有的样式表中保持一致。</p>
+<p>就我个人而言，我将使用两者结合的方式。如果一个选择器超过了3个属性，我将截断它采用多行的方式编写。</p>
+<p><code><br />
+div#header { float: left; width: 100%; }<br />
+div#header div.column {<br />
+border-right: 1px solid #ccc;<br />
+float: rightright;<br />
+margin-right: 50px;<br />
+padding: 10px;<br />
+width: 300px;<br />
+}<br />
+div#header h1 { float: left; position: relative; width: 250px; }<br />
+</code></p>
+<p>所以找到你喜欢的工作方式然后保持一致。</p>
+<h3>5.从正确的地方开始</h3>
+<p><strong>在完成标记语言之前不要去尝试靠近你的样式表。</strong></p>
+<p>当我准备分割一张网页的时候，创建CSS文件之前，我需要预览并且标记body开标签到body的闭合标签之间的所有文档。我不会增加额外的DIV ,ID,或者类选择器。我将会添加一些一般的DIV，就好像hearder、content、footer.因为我知道这些东西是现实存在的。</p>
+<p>通过先标记文档，你将不会碰到本已注定的divities1和classitis2麻烦!/*You only need to add in that stuff once you have begun to write the CSS and realize that you are going to need another hook to accomplish what you are trying to achieve.*/(原文未译）。</p>
+<p>利用CSS子选择器指定子元素；不要只是机械的给元素添加类或者ID选择器。记住：<strong>没有一个良好的格式化文档（或者标记结构）CSS是无价值的。</strong></p>
+<h3>总结</h3>
+<p>这些Tips能够帮助我更好的完成CSS代码的编写。但是这并不意味着这张列表的结束，接下来我将会去带来一些其他的与大家分享。</p>
+<strong>你有什么更好的Tips帮助我们完善CSS代码？</strong>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

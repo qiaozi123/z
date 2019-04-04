@@ -1,0 +1,5 @@
+INSERT INTO `dede_flink` VALUES('10','1','http://www.baidu.com','织梦源码','','','','1447292923','1','2');
+INSERT INTO `dede_flink` VALUES('12','1','http://www.baidu.com','技术支持','','','','1447292934','1','2');
+INSERT INTO `dede_flink` VALUES('11','1','http://www.baidu.com','织梦模板','','','','1447292928','1','2');
+INSERT INTO `dede_flink` VALUES('13','1','http://www.baidu.com','响应式织梦模板','','','','1475199976','1','2');
+INSERT INTO `dede_flink` VALUES('14','1','http://www.baidu.com/host/','织梦主机','','','','1475199986','1','2');

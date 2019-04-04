@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>HTML教程：建立超级连接_我的网站</title>
+<meta name="keywords" content="HTML教程：建立超级连接" />
+<meta name="description" content="tabbing浏览不或不能使用指点设备的用户可以用快捷键tab键来打开连接，并且本身也要有逻辑tab顺序。尽管HTML是线性的，tabindex属性允许你定义它快捷键们的顺序，而且这些逻辑tab应该可以自动落入自己位置。快捷键快捷键可以通过键盘的特定按键进行更方" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/html/'>HTML</a> > HTML教程：建立超级连接</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">HTML教程：建立超级连接 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=9&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <strong>tabbing浏览<br /><br /></strong>不或不能使用指点设备的用户可以用快捷键tab键来打开连接，并且本身也要有逻辑tab顺序。尽管HTML是线性的，tabindex属性允许你定义它快捷键们的顺序，而且这些逻辑tab应该可以自动落入自己位置。<br /><br /><strong>快捷键</strong><br /><br />快捷键可以通过键盘的特定按键进行更方便的导航（当按住Alt键或者Ctrl键时获得焦点）。对于那些没有指点设备的用户，比起使用tab键操作连接更快捷，更方便。<br /><br />没有必要为每一个连接都设置快捷键，但为主要导航连接都设置是一个不错的主意。<br /><br /><p class="code"><a href="somepage.html" accesskey="s">Some page</a></p> <br /><strong>注意</strong><br /><br /><p class="code">快捷键的麻烦是，用户常常没有办法知道它们在哪里和到底是什么键（除非查看源代码）。虽然JAWS──一个可以大声读出快捷键的屏幕阅读器，但要掘尽其能，你还是得让快捷键更直白。<br />你可以使用像“跳过导航”的连接技术（下详），或者选择一个独立的页面来说明你网站的这些易用性相关功能，包括快捷键。一个越来越流行的办法是在一个与快捷键相一致的字母上加下划线，类似于Windows程序菜单中的方法。</p><br /><strong>连接的标题</strong><br /><br />为连接添加标题属性title是一个好主意，这会给用户所指向连接的予说明，所以能改进导航。<br /><br />假如这个连接是执行Javascript的，这也有利于为没有使用Javascript功能的用户解释什么将会（或不会）发生。<br /><br /><p class="code"><a href="#" onclick="opennastypopup()" onkeypress="opennastypopup()"<br />title="Open a nasty Javascript pop-up window">Monster</a></p><br /><strong>弹出窗口</strong><br /><br />说到Javascript弹出窗口，你要坚持使用的话，或者很多人（你的用户）告诉你要使用，你可以用onkeypress和onclick来使得页面更易用。并且，在功能上定义了返回false的弹出窗口，包含一个带有href属性指向普通页面的连接，对于一个没有使用Javascript功能的用户来说，可以以普通方式载入这个页面。<br /><br />比如：<br /><br /><p class="code"><script type="text/javascript"><br />function opennastypopup()<br />{ <br />window.open("monster.html", "", "toolbar=no,height=100,width=200"); <br />return false; <br />} <br /></script><br /> ... <br /><a href="monster.html" onclick="return opennastypopup()" onkeypress="return opennastypopup()">Monster</a></p> <br /><strong>相邻的连接</strong><br /><br />相邻的连接应该至少用空格隔开，以便为屏幕阅读器清晰辩明。<br />这也可以用字符来完成，连接之间的（比如竖线 |── 连接 | 连接），或者包围连接的（如中括号 [] ── [连接] [连接]）。把连接放在列表里面也是一个好主意。然后可以用CSS来样式化显示，甚至可以是并行的列表（用 display: in-line）。<br /><br /><strong>跳过导航</strong><br /><br />你应该让使用屏幕阅读器的用户一个跳过导航直接到内容的机会。这是因为，假设你的连接是固定的（应该是），用户不必经受每一页同样的信息，尤其是大量的。你可以设置一个连接，跳过导航直接跳到内容的连接。<br /><br />看起来像是这样的：<br /><br /><p class="code"><p id="header"><br /> <h1>The Heading</h1><br /> <a href="#content" accesskey="n">Skip navigation</a><br /></p><br /><p id="navigation"><br /><!--loads of navigation stuff --><br /></p><br /><p id="content"><br /><!--lovely content --><br /></p></p> <br />显然，你没有必要在可视化浏览器中显示它，所有你可以用CSS开隐藏它。<br /><br />注意<br /><br /><p class="code">这是虽然只是一个CSS的小技巧，但是“跳过导航”的特效药。这涉及到隐藏连接的方法。<br />最常见的办法可能是使用display: none，但有些浏览器看到但不理解这个连接，“跳过导航”的连接必须显示。<br />然而没有必要显示──没有理由显示给醒目的用户。所以坚持使用包含display: none的样式，还不如把元素宽和高设置为零（width: 0; height: 0; overflow: hidden;），这有相同的视觉效果，但可以使屏幕阅读器理解。</p>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/html/2010/0407/7.html" rel="similar" title="对于初学者不错的XHTML教程"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>对于初学者不错的XHTML教程</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/10.html" rel="similar" title="表格中单元格之间分隔线的隐藏方"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>表格中单元格之间分隔线的隐藏方</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/18.html" rel="similar" title="浅谈XHTML（可扩展HTML）标准中CDAT"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>浅谈XHTML（可扩展HTML）标准中CDAT</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>学习HTML 4.0事件属性_我的网站</title>
+<meta name="keywords" content="学习HTML,4.0事件属性" />
+<meta name="description" content="HTML 4.0的新特性之一是使HTML事件触发浏览器中的行为，比方说当用户点击一个HTML元素时启动一段JavaScript。以下就是可被插入HTML标签以定义事件行为的一系列属性。假如你希望学习如何使用这些事件进行编程，那么你应该学习我们的JavaScript教程和DHTML教程" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/html/'>HTML</a> > 学习HTML 4.0事件属性</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">学习HTML 4.0事件属性 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=1&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>HTML 4.0的新特性之一是使HTML事件触发浏览器中的行为，比方说当用户点击一个HTML元素时启动一段JavaScript。以下就是可被插入HTML标签以定义事件行为的一系列属性。</p><p>假如你希望学习如何使用这些事件进行编程，那么你应该学习我们的JavaScript教程和DHTML教程。</p><h3>窗口事件 (Window Events)</h3><p>仅在body和frameset元素中有效。</p><table width="100%"><tbody><tr><th width="25%">属性</th><th width="15%">值</th><th width="60%">描述</th></tr><tr><td>onload</td><td>脚本</td><td>当文档被载入时执行脚本</td></tr><tr><td>onunload</td><td>脚本</td><td>当文档被卸下时执行脚本</td></tr></tbody></table><h3>表单元素事件 (Form Element Events)</h3><p>仅在表单元素中有效。</p><table width="100%"><tbody><tr><th width="25%">属性</th><th width="15%">值</th><th width="60%">描述</th></tr><tr><td>onchange</td><td>脚本</td><td>当元素改变时执行脚本</td></tr><tr><td>onsubmit</td><td>脚本</td><td>当表单被提交时执行脚本</td></tr><tr><td>onreset</td><td>脚本</td><td>当表单被重置时执行脚本</td></tr><tr><td>onselect</td><td>脚本</td><td>当元素被选取时执行脚本</td></tr><tr><td>onblur</td><td>脚本</td><td>当元素失去焦点时执行脚本</td></tr><tr><td>onfocus</td><td>脚本</td><td>当元素获得焦点时执行脚本</td></tr></tbody></table><h3>键盘事件 (Keyboard Events)</h3><p>在下列元素中无效：base, bdo, br, frame, frameset, head, html, iframe, meta, param, script, style, and title elements.</p><table width="100%"><tbody><tr><th width="25%">属性</th><th width="15%">值</th><th width="60%">描述</th></tr><tr><td>onkeydown</td><td>脚本</td><td>当键盘被按下时执行脚本</td></tr><tr><td>onkeypress</td><td>脚本</td><td>当键盘被按下后又松开时执行脚本</td></tr><tr><td>onkeyup</td><td>脚本</td><td>当键盘被松开时执行脚本</td></tr></tbody></table><h3>鼠标事件 (Keyboard Events)</h3><p>在下列元素中无效：base, bdo, br, frame, frameset, head, html, iframe, meta, param, script, style, title elements.</p><table width="100%"><tbody><tr><th width="25%">属性</th><th width="15%">值</th><th width="60%">描述</th></tr><tr><td>onclick</td><td>脚本</td><td>当鼠标被单击时执行脚本</td></tr><tr><td>ondblclick</td><td>脚本</td><td>当鼠标被双击时执行脚本</td></tr><tr><td>onmousedown</td><td>脚本</td><td>当鼠标按钮被松开时执行脚本</td></tr><tr><td>onmousemove</td><td>脚本</td><td>当鼠标指针移动时执行脚本</td></tr><tr><td>onmouseout</td><td>脚本</td><td>当鼠标指针移出某元素时执行脚本</td></tr><tr><td>onmouseover</td><td>脚本</td><td>当鼠标指针悬停于某元素之上时执行脚本</td></tr><tr><td>onmouseup</td><td>脚本</td><td>当鼠标按钮被松开时执行脚本</td></tr></tbody></table>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/html/2010/0407/18.html" rel="similar" title="浅谈XHTML（可扩展HTML）标准中CDAT"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>浅谈XHTML（可扩展HTML）标准中CDAT</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/10.html" rel="similar" title="表格中单元格之间分隔线的隐藏方"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>表格中单元格之间分隔线的隐藏方</i> </a> </li>
+<li> <a href="/a/webbase/html/2010/0407/7.html" rel="similar" title="对于初学者不错的XHTML教程"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>对于初学者不错的XHTML教程</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

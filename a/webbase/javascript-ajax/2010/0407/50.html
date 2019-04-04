@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>如何用JavaScript实现旋转木马_我的网站</title>
+<meta name="keywords" content="如何用JavaScript实现旋转木马" />
+<meta name="description" content="Flash动画可以让Web网站看起来很漂亮，但是由于各种原因不是每个人都会在自己的客户端浏览器上安装Flash播放器。如果你或者你的用户不幸安装了64位的Linux发行版，或者你痛恨在自己的Web页面上放动画，那么你就不得不面对没有Flash动画的情况了。" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/javascript-ajax/'>Javascript/Ajax</a> > 如何用JavaScript实现旋转木马</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">如何用JavaScript实现旋转木马 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=50&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>Flash动画可以让Web网站看起来很漂亮，但是由于各种原因不是每个人都会在自己的客户端浏览器上安装Flash播放器。如果你或者你的用户不幸安装了64位的Linux发行版，或者你痛恨在自己的Web页面上放动画，那么你就不得不面对没有Flash动画的情况了。</p><p>在本文里，我将告诉你如何用JavaScript实现一个可用性更高的旋转木马（carousel）而弃用Flash。</p><p><strong>JavaScript——两害相交取其轻</strong></p><p>在本文里，我不准备去争论为什么要开发一个旋转木马，而是要接受我们不得不去开发的事实。</p><p>那么问题就来了：为什么要使用JavaSript而不是Flash？</p><ul><li>它要比Flash的实现更加轻巧——通过优化代码，我们只需要几千字节就能够获得一个可以使用的旋转木马，加载图片所需要的时间要比HTML和JavaScript的长。 </li><li>可维护性是另外一个原因。很多开发人员都知道JavaScript在可维护性上要胜Flash一筹。也许你没有（足够的）设计资源来创建一个功能完整的Flash实现，所以如果将它突然留给开发人员，这就意味着JavaScript是一个可行的替代方案。 </li><li>降级。在禁用JavaScript的情况下将有用的内容发送给用户要比在禁用Flash的情况下容易得多。 </li><li>可访问性。用屏幕阅读器浏览旋转木马要比浏览Flash对象更容易。 </li><li>Google。如果你的内容是在页面中的，Google就能够搜索到它；如果它在Flash中，而且页面中没有隐藏旋转木马的话，那么Googlebot就无法找到链接。</li></ul><p><strong>HTML基础</strong></p><p>知道了这些原因，就让我们从将要在本文中用到的四个内容开始创建旋转木马吧。</p><p align="left"><html></p><p align="left"><body></p><p align="left"><div id="storyContainer"></p><p align="left"><div id="story1"></p><p align="left"><a href="http://www.builderau.com.au/program/iis/soa/Protect_IIS_log_files_by_moving_them_to_a_secure_location/0,339028427,339271617,00.htm" class="ched">Secure IIS</a></p><p align="left">Log files are essential to reconstruct events before an IIS Web server failure. Learn how to protect your log files with this tip.</p><p align="left"><span class="fstory"><a href="http://www.cnet.com.au/software/security/0,39029558,40058242,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"><div id="story2"></p><p align="left"><a href="http://www.builderau.com.au/program/html/soa/Microformats_and_Mapping/0,339028420,339271486,00.htm" class="ched">User Group Mash</a></p><p align="left">Find an Aussie user group near you with our new Google maps interface.</p><p align="left"><span class="fstory"><a href="http://www.builderau.com.au/program/html/soa/Microformats_and_Mapping/0,339028420,339271486,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"><div id="story3"></p><p align="left"><a href="http://www.builderau.com.au/program/dotnet/soa/Quick_Start_guide_to_Microsoft_NET_development/0,339028399,339271495,00.htm" class="ched">.NET 101</a></p><p align="left">Learn how the .NET Framework works and the tools you'll need to get up and running in this quick start guide.</p><p align="left"><span class="fstory"><a href="http://www.builderau.com.au/program/dotnet/soa/Quick_Start_guide_to_Microsoft_NET_development/0,339028399,339271495,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"><div id="story4" ></p><p align="left"><a href="http://www.builderau.com.au/program/css/soa/Understanding_the_CSS_box_model/0,39028392,39269220,00.htm" class="ched">Understand CSS</a></p><p align="left">Before diving into CSS learn some of the core drivers and concepts.</p><p align="left"><span class="fstory"><a href="http://www.builderau.com.au/program/css/soa/Understanding_the_CSS_box_model/0,39028392,39269220,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"></div></p><p align="left"></body></p><p align="left"></html></p><p>这个时候蒙娜丽莎对我们还没有用。现在让我们向这些div加入一些样式，让它看起来更像我们所知道的旋转木马：</p><p align="left"><html></p><p align="left"><head></p><p align="left"><style></p><p align="left">.storydiv {</p><p align="left">height:182px;</p><p align="left">width:355px;</p><p align="left">padding-left:175px;</p><p align="left">top:0px;</p><p align="left">left:0px;</p><p align="left">}</p><p align="left">#story1 {</p><p align="left">background:url(http://www.builderau.com.au/i/s/cov/securitychain170110.gif) no-repeat;</p><p align="left">}</p><p align="left">#story2 {</p><p align="left">background:url(http://www.builderau.com.au/i/s/cov/browser170110.jpg) no-repeat;</p><p align="left">}</p><p align="left">#story3 {</p><p align="left">background:url(http://www.builderau.com.au/i/s/cov/dotnet170110.gif) no-repeat;</p><p align="left">}</p><p align="left">#story4 {</p><p align="left">background:url(http://www.builderau.com.au/i/s/cov/tools170110.jpg) no-repeat;</p><p align="left">}</p><p align="left">.storyDesc{</p><p align="left">padding-top: 10px; </p><p align="left">padding-right: 8px;</p><p align="left">display:block;</p><p align="left">}</p><p align="left">.fStory {</p><p align="left">padding-top: 10px;</p><p align="left">display:block;</p><p align="left">font-weight:bold;</p><p align="left">}</p><p align="left"></style></p><p align="left">&nbsp;</p><p align="left"></head></p><p align="left"><body></p><p align="left"><div id="storyContainer"></p><p align="left"><div id="story1" class="storydiv"></p><p align="left"><a href="http://www.builderau.com.au/program/iis/soa/Protect_IIS_log_files_by_moving_them_to_a_secure_location/0,339028427,339271617,00.htm" class="ched">Secure IIS</a></p><p align="left"><span class="storydesc"></p><p align="left">Log files are essential to reconstruct events before an IIS Web server failure. Learn how to protect your log files with this tip.</span></p><p align="left"><span class="fstory"><a href="http://www.cnet.com.au/software/security/0,39029558,40058242,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"><div id="story2" class="storydiv"></p><p align="left"><a href="http://www.builderau.com.au/program/html/soa/Microformats_and_Mapping/0,339028420,339271486,00.htm" class="ched">User Group Mash</a></p><p align="left"><span class="storydesc"></p><p align="left">Find an Aussie user group near you with our new Google maps interface.</span></p><p align="left"><span class="fstory"><a href="http://www.builderau.com.au/program/html/soa/Microformats_and_Mapping/0,339028420,339271486,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"><div id="story3" class="storydiv"></p><p align="left"><a href="http://www.builderau.com.au/program/dotnet/soa/Quick_Start_guide_to_Microsoft_NET_development/0,339028399,339271495,00.htm" class="ched">.NET 101</a></p><p align="left"><span class="storydesc"></p><p align="left">Learn how the .NET Framework works and the tools you'll need to get up and running in this quick start guide.</span></p><p align="left"><span class="fstory"><a href="http://www.builderau.com.au/program/dotnet/soa/Quick_Start_guide_to_Microsoft_NET_development/0,339028399,339271495,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left"><div id="story4" class="storydiv"></p><p align="left"><a href="http://www.builderau.com.au/program/css/soa/Understanding_the_CSS_box_model/0,39028392,39269220,00.htm" class="ched">Understand CSS</a></p><p align="left"><span class="storydesc"></p><p align="left">Before diving into CSS learn<br/>some of the core drivers and concepts.</span></p><p align="left">&nbsp;</p><p align="left"><span class="fstory"><a href="http://www.builderau.com.au/program/css/soa/Understanding_the_CSS_box_model/0,39028392,39269220,00.htm">Full story</a></span></p><p align="left"></div></p><p align="left">&nbsp;</p><p align="left"></div></p><p align="left"></body></p><p align="left"></html></p><p align="left">
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/javascript-ajax/2010/0407/35.html" rel="similar" title="用JavaScript的日期对象操控时间和日"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>用JavaScript的日期对象操控时间和日</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/43.html" rel="similar" title="JavaScript的9个陷阱及评点"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>JavaScript的9个陷阱及评点</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/52.html" rel="similar" title="完全了解AJAX"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>完全了解AJAX</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

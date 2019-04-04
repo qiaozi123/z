@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" media="all" href="{dede:global.cfg_cmsurl/}/style6/css/style.css" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style6/css/common.css" type="text/css" media="screen" />
+
+<!-- script START -->
+
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style6/js/jquery-1.10.2.min.js"></script>
+<meta name="generator" content="WordPress 4.1" />
+<style type="text/css">
+.recentcomments a {
+	display: inline !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+</style>
+</head>
+
+<body>
+
+<!--Header--> 
+
+<!-- header start --> 
+
+{dede:include filename="head.htm"/} 
+
+<!--Header End-->
+
+<div class="content">
+  <div class="center"> 
+    
+    <!-- 右侧导航 --> 
+    
+    <!-- 右侧导航 --> 
+    
+    {dede:include filename="y2.htm"/} <!-- <div class="center_left">-->
+    
+    <div class="center_left_list">
+    <div class="center_dh"> 
+      
+      <!--<div class="biaoqian">标签</div>  &nbsp;-->
+      
+      <div id="xz_content"> </div>
+    </div>
+    <ul class="center_bg">
+      {dede:list pagesize='10'}
+      <li>
+        <div class="info_list"> <a href="javascript:void(0)">
+          <div class="info_list_left"></div>
+          </a>
+          <div class="info_right_list">
+            <ul class="zc">
+              <li class="zx_neirong_list">
+                <dl class="zc_dl_list">
+                  <dd class="zc_title">[field:title/]</dd>
+                  <dd> <a href="[field:arcurl/]"> <img src="/style6/images/grey.gif" data-original="[field:litpic/]" alt="[field:title/]" width="535" height="230" /> </a> </dd>
+                  <dd class="zc_info_sj"> [field:description function='cn_substr(@me,160)'/]...
+                    <div class="djl"><!--&nbsp;|&nbsp;&nbsp;--><img src="/style6/images/eyes.png" width="18" height="10" /> 2,349 </div>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      {/dede:list} 
+      
+      <!--Page-->
+      
+      <li style="height:45px;margin-top:30px;">
+        <div class="dede_pages">
+          <ul class="pagelist">
+            {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+          </ul>
+        </div>
+      </li>
+      
+      <!--Page End-->
+      
+      </div>
+    </ul>
+  </div>
+</div>
+</div>
+{dede:include filename="fd.htm"/} 
+
+<!--Container End--> 
+
+{dede:include filename="footer.htm"/}
+<div style="position:absolute; width:0px; height:0px; z-index:1; display:none"> 
+  <script src="http://s11.cnzz.com/stat.php?id=5940822&web_id=5940822" language="JavaScript"></script> 
+</div>
+
+<!-- /footer --> 
+
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style6/js/pic.min.js"></script> 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style6/js/zxmt.js"></script> 
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/style6/js/jquery.lazyload.js"></script> 
+<script>
+
+jQuery(document).ready(
+
+	function($){
+
+		$("img").lazyload({
+
+			placeholder : "{dede:global.cfg_cmsurl/}/style6/images/grey.gif",
+
+			effect : "fadeIn",
+
+			threshold : 200
+
+		});
+
+	}
+
+);
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:2,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+</script>
+</body>
+</html>

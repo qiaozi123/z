@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>讨论Ajax之所以优于JSF的原因_我的网站</title>
+<meta name="keywords" content="讨论Ajax之所以优于JSF的原因" />
+<meta name="description" content="Sun为什么会搞出一个JSF，JSF为什么会是现在这个样子，我想原因是这样的: 首先，基于组件的Web开发将来会是一个趋势。自包含的组件便于IDE的处理，可以提高开发效率。" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/javascript-ajax/'>Javascript/Ajax</a> > 讨论Ajax之所以优于JSF的原因</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">讨论Ajax之所以优于JSF的原因 <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=46&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> 　　Sun为什么会搞出一个JSF，JSF为什么会是现在这个样子，我想原因是这样的: 首先，基于组件的Web开发将来会是一个趋势。自包含的组件便于IDE的处理，可以提高开发效率。 <br /><br />　　就是说JSF优于Struts/WebWork这类MVC框架的优势，在于它可以与IDE结合来自动生成代码。 而传统的纯手工编写的MVC框架，影响了开发效率。 因为Java技术在客户端并没有明显的优势。Applet已经被抛弃掉，Java的强项在服务器端。Sun不可能跑去使用JavaScript，因为在传统开发者眼里，JS只配做一点很琐碎的任务。 <br /><br />　　于是在他们设计的这个架构中，所有的用户事件都放在了服务器端来处理, 这个决策造成了JSF致命的缺点。它把事件处理模型绑死在服务器上，限制了响应性更加灵敏的交互设计。随之而来的网络延迟会毁掉软件的可用性。 这也是Ajax在JSF的架构中无法充分发挥作用的原因。 <br /><br />　　JSF的设计思路有点模仿VB，组件化的开发这个方向是没错的，Ajax开发将来也会走这条路。但是JSF与VB最大的差别是VB的事件模型都是位于本地来处理的。这是一种本质上的差别，所以如果JSF确实想模仿VB，那也是东施效颦。 而且在JSF的设计阶段，同步的请求/响应是主流，他们的思路仍然牢牢束缚在基于页面的开发方式上。根本就没有思考过其他的可能。 <br /><br />　　异步请求/响应是Ajax与传统开发方式最大的差别，异步带来了更好的交互设计。 <br /><br />　　在Ajax in Action第1章中作者举了一个令人信服的例子。Google Maps中当用户滚动地图时，获取新的地图图片，由于是异步请求的，因此不会打断用户的操作流程。 而在传统的地图服务，每次滚动可能都需要刷新页面。 用一下微软的那个地图服务就可以感觉到明显的差距，它甚至根本就不允许用户滚动地图。 <br /><br />　　http://terraserver.microsoft.com/ <br /><br />　　以前我说Google Maps不是Ajax，因为没有使用XMLHttpRequest，这样说看来理解有些狭隘。 Google Maps请求地图的图片，采用的是修改动态创建的img元素的src属性的方式，这样的请求不会打断用户的操作，因此就是异步的。 我们在Ajax in Action中看到作者将Google Maps当作Ajax应用，而在Pragmatic Ajax中作者说Google Maps不是严格意义上的Ajax，两种说法都有道理。 <br /><br />　　JSF其实如果和Applet结合，可能更好些。Applet是多线程的，可以捕获用户的操作事件，采用异步方式发送到服务器。这样就不会打断用户的操作了。 但是这样一来设计的这个架构就复杂了。而且Applet是已经决定抛弃的东西。 JSF和Java Web Start结合也可以，不过JWS设计用来建造一类完全不同的Web应用，即Rich Client，而不是设计用来建造运行于浏览器之内的RIA应用。 所以JSF最多只是一种过渡方案，在Ajax/Flash的竞争下早已风光不在。 <br /><br />　　未来基于浏览器的RIA开发，Ajax、Flash是两种最有前途的技术。 <br /><br />　　按照泽欣的判断可能是三分天下，Ajax、Flash/Flex/Laszlo、还有M$的Atlas。 Atlas是M$开发的类似于Flash的一种技术，目前还只是一个vaporware，没有看到其庐山真面目。 Java Web Start相比之下只能局限于一些内部应用。 <br /><br />　　将来位于客户端的表现层开发可能会完全没有Java的位置，这是Sun不愿意看到的，但是Sun在这场角逐中只不过是一个小角色。
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/javascript-ajax/2010/0407/35.html" rel="similar" title="用JavaScript的日期对象操控时间和日"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>用JavaScript的日期对象操控时间和日</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/43.html" rel="similar" title="JavaScript的9个陷阱及评点"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>JavaScript的9个陷阱及评点</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/52.html" rel="similar" title="完全了解AJAX"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>完全了解AJAX</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

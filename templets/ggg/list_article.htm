@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/style1/css/common.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+<!-- header start --> 
+
+{dede:include filename="head.htm"/} 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+{dede:include filename="hd1.htm"/} 
+
+<!-- menu end --> 
+
+<!-- 列表页 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> {dede:field name='position'/}
+    <input type="hidden" id="cur_menu" value="">
+  </div>
+  <div class="lb_con">
+    <div class="lb_con_left">
+      <ul>
+        {dede:list pagesize='20'}
+        <li>
+          <div class="lb_detail"> <a href="[field:arcurl/]">
+            <div class="lb_pic"><img width="235" height="186" src="[field:litpic/]" class="attachment-thumbnail wp-post-image" alt="0" /></div>
+            <div class="lb_txt">
+              <h2>[field:title/]</h2>
+              [field:description function='cn_substr(@me,160)'/]...</a> <span><s></s> [field:click/]</span> </div>
+          </div>
+        </li>
+        {/dede:list}
+      </ul>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    {dede:include filename="y1.htm"/}
+    <div class="pagenavi"> </div>
+  </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> {dede:include filename="footer.htm"/} 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script> 
+
+<!-- cnzz数据统计 -->
+
+</body>
+</html>

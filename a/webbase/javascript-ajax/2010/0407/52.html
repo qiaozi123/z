@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>完全了解AJAX_我的网站</title>
+<meta name="keywords" content="完全了解AJAX" />
+<meta name="description" content="尽管AJAX是个相对新生的术语，但其背后的技术却并不新颖。我们从基础开始认识AJAX，一种颠覆性的技术，其改变了Web应用程序的开发和应用方式，使得交互性页面和网站处于目前网络潮流的最前沿。" />
+<link rel="stylesheet" href="/style1/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style1/css/common.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/style1/js/jquery-1.4.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- header start --> 
+
+<div class="head_wrap">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/style/images/logo1.png" border="0"/></a><img src="/style/images/slogan.gif" border="0"/></div>
+    
+    <!--<div class="present_position">杭州</div>-->
+    
+    <div class="togo_menu">
+      <ul class="lavaLampNoImage">
+        <li><a href="/">首&nbsp;&nbsp;页</a></li>
+        
+        <li><a href='/a/webbase/' target="_blank">网页基础</a></li>
+        
+        <li><a href='/a/pics/' target="_blank">站长图集</a></li>
+        
+        <li><a href='/a/downloads/' target="_blank">软件下载</a></li>
+        
+        <li><a href='/a/shops/' target="_blank">商品销售</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- header end --> 
+
+<!-- menu start --> 
+
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          <dt> <a id="before" href=" /a/pics/"> <s></s>站长图集 </a> </dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          <dt><a id="ing" href='/a/downloads/'><s></s>软件下载</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          <dt><a id="after" href="/a/shops/"><s></s>商品销售</a></dt>
+          
+          
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+
+<!-- menu end --> 
+
+<!-- 内容 -->
+
+<div class="all"> 
+  
+  <!-- 当前位置 -->
+  
+  <div class="jy_fastNav"> <a href='/'>主页</a> > <a href='/a/webbase/'>网页基础</a> > <a href='/a/webbase/javascript-ajax/'>Javascript/Ajax</a> > 完全了解AJAX</span> </div>
+  <div class="lb_con">
+    <div class="con_con_left">
+      <div class="con_con_left_wrapper">
+        <div>
+          <div class="con_title">完全了解AJAX <span class="list_visited_num"><u class="list_visited_pic"></u>&nbsp; <script src="/plus/count.php?view=yes&aid=52&mid=1" type='text/javascript' language="javascript"></script> </span> </div>
+          <div class="con_con">
+            <ul>
+              <li> <p>尽管AJAX是个相对新生的术语，但其背后的技术却并不新颖。随着XMLHttpRequest对象在大多数浏览器中的实现，以及GMail和Google Maps的出现激发了软件开发者重新考虑如何构建网页的灵感。我们从基础开始认识AJAX，一种颠覆性的技术，其改变了Web应用程序的开发和应用方式，使得交互性页面和网站处于目前网络潮流的最前沿。</p><p>当请求被发送到浏览器后，其所具有的改变网页内容的功能已经存在许多年了-使用javascript脚本改变iframe's src属性是技术之一。</p><p><strong>XMLHttpRequest对象</strong></p><p>XMLHttpRequest对象使AJAX的出现成为可能，它产生异步请求，并决定如何处理结果。在大多数浏览器中，我们使用如下代码来创建对象：</p><p>var xmlhttp = false;</p><p>try {</p><p>xmlhttp = new XMLHttpRequest();</p><p>} catch (e) {</p><p>alert("cannot create object");</p><p>}</p><p>不幸的是，上文中所提到的“大多数浏览器”并不包括IE,因此对于微软的浏览器，我们需要采用一种特殊的方法创建对象。值得注意的是，根据MSXML解析器的不同版本，需要分别编写两种代码。</p><p>var xmlhttp = false;</p><p>try {</p><p>xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");</p><p>} catch (othermicrosoft) {</p><p>try {</p><p>xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");</p><p>} catch (failed) {</p><p>xmlhttp = false;</p><p>}</p><p>因此，结合上述两个代码片段，我们得到了以下适合所有主流浏览器创建XMLHttpRequest对象的代码：</p><p>var xmlhttp = false;</p><p>try {</p><p>xmlhttp = new XMLHttpRequest();</p><p>} catch (trymicrosoft) {</p><p>try {</p><p>xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");</p><p>} catch (othermicrosoft) {</p><p>try {</p><p>xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");</p><p>} catch (failed) {</p><p>xmlhttp = false;</p><p>}</p><p>}</p><p>}</p><p>
+            <p align="center"> </p> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 相关推荐 -->
+      
+      <div class="RelRecommend">
+        <ul>
+          <li> <a href="/a/webbase/javascript-ajax/2010/0407/35.html" rel="similar" title="用JavaScript的日期对象操控时间和日"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>用JavaScript的日期对象操控时间和日</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/43.html" rel="similar" title="JavaScript的9个陷阱及评点"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>JavaScript的9个陷阱及评点</i> </a> </li>
+<li> <a href="/a/webbase/javascript-ajax/2010/0407/52.html" rel="similar" title="完全了解AJAX"> <img width="235" height="168" src="/images/defaultpic.gif" class="attachment-thumbnail wp-post-image" alt="0415bzfb_00" /> <i>完全了解AJAX</i> </a> </li>
+
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 热点标签&精彩专题 --> 
+    
+    <div class="con_right">
+  <div class="con_right_top">热点标签</div>
+  <div class="con_right_bottom">
+    <dl class="jy_hot_tag">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </div>
+  <div class="con_right_top">精彩专题</div>
+  <div class="con_right_bottom">
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+ </div>
+</div>
+<a id="returnTop" href="javascript:;"></a> <div class="footer">
+  <ul class="connect">
+    <li style="padding-right:100px; ">
+      <dl style="padding-left: 0px;">
+        <dt>业主指南</dt>
+        <dd><a href="/" target="_blank">装修效果图</a></dd>
+        <dd><a href="/" target="_blank">找装修公司</a></dd>
+        <dd><a href="/" target="_blank">团装修建材</a></dd>
+        <dd><a href="/" target="_blank">精选家居</a></dd>
+      </dl>
+      <dl>
+        <dt>关于我们</dt>
+        
+      </dl>
+      <dl>
+        <dt>发现更多</dt>
+        
+      </dl>
+    </li>
+    <li> <img src="/style1/images/ewm_app.jpg" border="0"><br>
+      下载微装修APP </li>
+    <li> <img src="/style1/images/ewm_zxly.jpg" border="0"><br>
+      关注官方微信 </li>
+  </ul>
+</div>
+ 
+<script type="text/javascript" src="/style1/js/zxjy.js"></script> 
+<script type="text/javascript" src="/style1/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+jQuery(document).ready(
+
+	function($){
+
+	$("img").lazyload({
+
+			effect : "fadeIn",
+
+			threshold : 150
+
+	});
+
+});
+
+$(document).ready(function() {
+
+	/*导航条*/
+
+	$(".lavaLampNoImage").lavaLamp({
+
+		fx: "backout", 
+
+		speed: 700,
+
+		n:3,
+
+		click: function(event, menuItem) {
+
+			return false;
+
+		}
+
+	});
+
+});	
+
+
+
+</script>
+</body>
+</html>

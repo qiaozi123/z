@@ -1,0 +1,46 @@
+<div class="menu">
+  <ul>
+    <!-- 装修前 -->
+    <li class="jy_zx_before">
+      <div>
+        <dl>
+          {dede:type typeid='6'}
+          <dt> <a id="before" href=" [field:typeurl/]"> <s></s>[field:typename/] </a> </dt>
+          {/dede:type}
+          
+          {dede:channel type='son' typeid='6'   }
+          <dd><a id="sheji" href='[field:typeurl/]'>[field:typename/]</a></dd>
+          {/dede:channel}
+        </dl>
+      </div>
+    </li>
+    <!-- 装修中 -->
+    <li class="jy_zx_ing">
+      <div>
+        <dl>
+          {dede:type typeid='7'}
+          <dt><a id="ing" href='[field:typeurl/]'><s></s>[field:typename/]</a></dt>
+          {/dede:type}
+          
+          {dede:channel type='son' typeid='7'   }
+          <dd><a id="shuidian" href="[field:typeurl/]">[field:typename/]</a></dd>
+          {/dede:channel}
+        </dl>
+      </div>
+    </li>
+    <!-- 装修后 -->
+    <li class="jy_zx_after">
+      <div>
+        <dl>
+          {dede:type typeid='8'}
+          <dt><a id="after" href="[field:typeurl/]"><s></s>[field:typename/]</a></dt>
+          {/dede:type}
+          
+          {dede:channel type='son' typeid='8'   }
+          <dd><a id="ruzhu" href="[field:typeurl/]">[field:typename/]</a></dd>
+          {/dede:channel}
+        </dl>
+      </div>
+    </li>
+  </ul>
+</div>
